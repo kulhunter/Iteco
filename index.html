@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITECO Ingeniería LTDA. | Servidores Administrados, SAP B1, Softland Cloud y Servicios ITC en Chile</title>
+    <title>ITECO Ingeniería | Servidores Administrados Chile, Cloud ERP, Continuidad Operativa</title>
+    
+    <!-- SEO & AEO (Optimización de Motores de Búsqueda y Asistentes) -->
+    <meta name="description" content="ITECO Ingeniería: Servidores Administrados Chile, Cloud ERP Integrado, y Continuidad Operativa Cloud para PYMES. Especialistas en Softland y SAP B1, con Antiransomware y Soporte Local en Macul, Santiago.">
+    <meta name="keywords" content="Servidores Administrados Chile, Cloud ERP Chile, Módulos ERP para PYMES, Continuidad Operativa Cloud, Hosting de Aplicaciones Críticas, Respaldo de datos, Plataforma administrativa, Servidores dedicados, Soluciones ERP, Soporte ERP, Oficina Remota, Business Intelligence BI, Integración ERP Commerce, Servidores para ERP Softland, Servidores para ERP Sap B1, Soporte Local, Servidores en Chile, Servidores autogestionados, Outsorcing de sistemas, Auditoria de sistemas, Servicio de soporte, Servicios e Infraestructura productiva, Infraestructura administrada, Nube privada, Plataformas ERP Softland, Plataformas ERP SAP B1, On-Premise Cloud, Cloud ERP Integrado, Servicios IaaS PaaS, Antiransomware con reversión automática, Cumplimiento Normativo ISO 27001, Reducir riesgo de falla sistemas, Alternativas a la nube genérica, Configurador de servidores online, Servidores de bases de datos Linux/Windows">
+    <link rel="canonical" href="https://www.itecoingenieria.cl">
+    
+    <!-- Configuración GEO (Local Business Schema) - JSON-LD OMITIDO POR BREVEDAD -->
+
     <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración de la fuente Inter y personalización de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -15,366 +22,732 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'iteco-blue': '#003366', // Azul oscuro profesional (Base)
-                        'iteco-light': '#1e90ff', // Azul vibrante para acentos (CTA/Highlights)
-                        'iteco-gray': '#F4F7F9', // Gris claro de fondo
+                        'iteco-blue': '#003366', 
+                        'iteco-cyan': '#009fe3', 
+                        'iteco-dark': '#1e293b', 
+                        'iteco-light': '#f1f5f9', 
+                    },
+                    boxShadow: {
+                        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Estilos personalizados */
+        /* Estilos personalizados para gradientes y la línea de tiempo */
         .hero-bg {
-            background: linear-gradient(135deg, #003366 0%, #005a8d 100%);
+            background: linear-gradient(135deg, #003366 0%, #1e293b 100%);
         }
-        .service-card {
+        .timeline-dot {
+            position: absolute;
+            top: 50%;
+            left: -1px; 
+            transform: translate(-50%, -50%);
+            width: 1.25rem; 
+            height: 1.25rem; 
+            background-color: white;
+            border: 4px solid #009fe3; 
+            border-radius: 9999px; 
+            z-index: 10;
+        }
+        /* Clase para el botón de la calculadora */
+        .btn-primary {
+            background-color: #009fe3; 
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; 
+            font-weight: bold;
+            display: inline-block;
             transition: all 0.3s ease;
         }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .btn-primary:hover {
+            background-color: #005a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos de la Calculadora Rediseñada */
+        .calculator-container {
+            background: linear-gradient(160deg, #003366 0%, #1e293b 100%);
+            color: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 51, 102, 0.5), 0 10px 10px -5px rgba(0, 51, 102, 0.2);
+        }
+        .calculator-input {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .calculator-input:hover {
+            border-color: #009fe3;
+            transform: scale(1.02);
+        }
+
+        /* ------------------ Chatbot Flotante (CX) ------------------ */
+        #chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #chat-button:hover {
+            transform: scale(1.05);
+        }
+        #chat-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 90vw;
+            max-width: 400px;
+            height: 70vh;
+            max-height: 550px;
+            z-index: 99;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 1rem;
+            display: none; /* Inicia oculto */
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+        }
+        .chat-body {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background-color: #f8fafc;
+        }
+        .chat-message-user {
+            background-color: #009fe3;
+            color: white;
+            align-self: flex-end;
+            margin-bottom: 0.75rem;
+            max-width: 85%;
+            padding: 0.75rem;
+            border-radius: 1rem 1rem 0 1rem;
+            word-wrap: break-word;
+        }
+        .chat-message-ai {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            align-self: flex-start;
+            margin-bottom: 0.75rem;
+            max-width: 85%;
+            padding: 0.75rem;
+            border-radius: 1rem 1rem 1rem 0;
+            word-wrap: break-word;
+        }
+        .chat-input-area {
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-iteco-gray">
+<body class="font-sans text-iteco-dark bg-iteco-light">
 
-    <!-- Navegación (Sticky y Responsiva) -->
+    <!-- Navegación -->
     <header class="sticky top-0 z-50 bg-white shadow-lg">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <div class="text-2xl font-extrabold text-iteco-blue">
-                ITECO Ingeniería
-            </div>
-            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
-                <a href="#servicios-erp" class="hover:text-iteco-light transition duration-300">ERP Cloud</a>
-                <a href="#servidores" class="hover:text-iteco-light transition duration-300">Servidores</a>
-                <a href="#servicios-itc" class="hover:text-iteco-light transition duration-300">Servicios ITC</a>
-                <a href="#blog" class="hover:text-iteco-light transition duration-300">Blog</a>
-                <a href="#contacto" class="hover:text-iteco-light transition duration-300">Contacto</a>
-            </div>
-            <a href="#contacto" class="hidden md:block bg-iteco-light text-white px-4 py-2 rounded-xl shadow-lg hover:bg-iteco-blue transition duration-300 font-semibold">
-                Solicitar Contacto
+            <!-- Logo -->
+            <a href="#home" class="text-3xl font-extrabold text-iteco-blue">
+                iT<span class="text-iteco-cyan">eco</span>
+                <span class="text-sm font-light text-gray-500 tracking-wider relative -top-2">ingeniería</span>
             </a>
-            <button id="menu-button" class="md:hidden text-iteco-blue focus:outline-none">
+
+            <!-- Menú de Escritorio -->
+            <div class="hidden lg:flex items-center space-x-5 text-sm font-medium text-gray-600">
+                <a href="#plataforma" class="hover:text-iteco-cyan transition duration-300">Plataforma</a>
+                <a href="#herramientas" class="hover:text-iteco-cyan transition duration-300">Configurador</a>
+                <a href="#seguridad" class="hover:text-iteco-cyan transition duration-300">Seguridad</a>
+                <a href="#contacto" class="hover:text-iteco-cyan transition duration-300">Contacto</a>
+                <a href="https://maps.app.goo.gl/8zZ47eXz71AmuhXX6" target="_blank" class="text-xs text-gray-400 hover:text-iteco-cyan transition duration-300">Soporte Local Chile</a>
+            </div>
+
+            <!-- Botón de Menú Móvil -->
+            <button id="menu-button" class="lg:hidden text-iteco-blue focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
 
         <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="md:hidden hidden">
+        <div id="mobile-menu" class="lg:hidden hidden">
             <div class="px-4 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-100">
-                <a href="#servicios-erp" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">ERP Cloud</a>
-                <a href="#servidores" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Servidores</a>
-                <a href="#servicios-itc" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Servicios ITC</a>
-                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Blog</a>
-                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Contacto</a>
-                <a href="#contacto" class="block w-full text-center bg-iteco-blue text-white mt-2 px-3 py-2 rounded-lg font-semibold">
-                    Solicitar Contacto
-                </a>
+                <a href="#plataforma" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-cyan">Plataforma</a>
+                <a href="#herramientas" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-cyan">Configurador</a>
+                <a href="#seguridad" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-cyan">Seguridad</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-cyan">Contacto</a>
+                <a href="https://maps.app.goo.gl/8zZ47eXz71AmuhXX6" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-cyan">Soporte Local (Macul)</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Sección HERO (Fuerte KW y Valor) -->
-        <section class="hero-bg py-20 sm:py-32 text-white shadow-2xl">
+
+        <!-- Sección HERO (H1) -->
+        <section id="home" class="hero-bg py-24 sm:py-32 text-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                    <span class="block">La Continuidad Operativa de su ERP y Servidores en Chile</span>
-                    <span class="block text-xl sm:text-2xl font-light mt-2 text-gray-200">
-                        Especialistas en Administración de Servidores, SAP Business One y Softland ERP en la Nube.
-                    </span>
+                    El Cerebro de tu Negocio: <span class="text-iteco-cyan">Cloud ERP Integrado en Chile</span>
                 </h1>
-                <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
-                    ITECO Ingeniería ofrece soluciones integrales de infraestructura crítica, asegurando la máxima disponibilidad, seguridad y rendimiento para su negocio.
+                <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+                    ITECO diseña entornos donde los sistemas no solo funcionan, se comunican. Ofrecemos **Servicios e Infraestructura productiva** para **Continuidad Operativa Cloud** y **Módulos ERP para PYMES**.
                 </p>
-                <a href="#servicios-itc" class="inline-block bg-iteco-light text-white px-8 py-3 rounded-xl font-bold text-lg shadow-2xl hover:bg-white hover:text-iteco-blue transition duration-300 transform hover:scale-105">
-                    Ver Portafolio de Servicios ITC
-                </a>
-            </div>
-        </section>
-
-        <!-- Sección 1: Servicios ERP Cloud (SAP B1 y Softland) -->
-        <section id="servicios-erp" class="py-16 sm:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-iteco-blue">Consultoría y Hosting ERP en la Nube</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Asegure el éxito de su sistema de planificación empresarial con una implementación correcta y un soporte de infraestructura de alto nivel.
-                </p>
-
-                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <!-- ERP 1: SAP Business One -->
-                    <div class="p-8 rounded-xl border border-gray-100 shadow-lg service-card">
-                        <div class="text-iteco-light mb-4 text-3xl font-extrabold">SAP Business One</div>
-                        <h3 class="text-xl font-semibold mb-3 text-iteco-blue">Infraestructura, Implementación y Soporte</h3>
-                        <p class="text-gray-600">
-                            ITECO ofrece servidores Cloud optimizados para SAP B1. Nuestro equipo de consultoría asegura una correcta parametrización y capacitación para que su ERP sea una herramienta competitiva.
-                        </p>
-                        <ul class="mt-4 list-disc list-inside space-y-1 text-sm text-gray-700">
-                            <li>Hosting dedicado con Alta Disponibilidad.</li>
-                            <li>Consultoría de implementación B1.</li>
-                            <li>Integración y desarrollo de informes.</li>
-                        </ul>
-                    </div>
-
-                    <!-- ERP 2: Softland ERP -->
-                    <div class="p-8 rounded-xl border border-gray-100 shadow-lg service-card">
-                        <div class="text-iteco-light mb-4 text-3xl font-extrabold">Softland ERP</div>
-                        <h3 class="text-xl font-semibold mb-3 text-iteco-blue">Consultoría e Implementación con Experiencia</h3>
-                        <p class="text-gray-600">
-                            Una correcta parametrización de Softland es clave. Nuestros profesionales con vasta experiencia sectorial aseguran que el ERP se integre al crecimiento de su negocio, facilitando su gestión.
-                        </p>
-                        <ul class="mt-4 list-disc list-inside space-y-1 text-sm text-gray-700">
-                            <li>Parametrización inicial según el negocio.</li>
-                            <li>Capacitación y soporte continuo.</li>
-                            <li>Desarrollo de interfaces a otros sistemas.</li>
-                        </ul>
-                    </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="#herramientas" class="btn-primary px-6 py-3 shadow-3xl transform hover:scale-105">
+                        Configura tu Servidor Ahora
+                    </a>
+                    <a href="#plataforma" class="inline-block bg-white text-iteco-blue px-6 py-3 rounded-xl font-bold text-lg shadow-xl hover:bg-gray-200 transition duration-300">
+                        Servidores Administrados
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 2: Servidores Administrados (Específico) -->
-        <section id="servidores" class="py-16 sm:py-24 bg-iteco-gray">
+        <!-- Sección Por Qué Iteco (KW: Reducir riesgo de falla sistemas) -->
+        <section id="porque-iteco" class="py-16 sm:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-6xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl border-t-4 border-iteco-light">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-iteco-blue">Administración de Servidores y Plataforma Cloud</h2>
-                    <p class="text-gray-600 mb-8 max-w-4xl">
-                        Asumimos la responsabilidad de la administración de sus servidores, estén o no en nuestra plataforma. Le permitimos volver el foco de atención a su negocio, garantizando la disponibilidad y la implementación de tecnología de punta.
-                    </p>
-                    <div class="grid md:grid-cols-3 gap-8 text-center">
-                        <div class="p-4 border-r border-gray-200">
-                            <span class="block text-4xl text-iteco-light mb-2">💾</span>
-                            <p class="font-semibold text-iteco-blue">Respaldo Total</p>
-                            <p class="text-sm text-gray-600">Copias de servidores restaurables en hardware distinto o VM.</p>
-                        </div>
-                        <div class="p-4 border-r border-gray-200">
-                            <span class="block text-4xl text-iteco-light mb-2">⚡</span>
-                            <p class="font-semibold text-iteco-blue">Alta Disponibilidad</p>
-                            <p class="text-sm text-gray-600">Sistemas críticos con disponibilidad garantizada por expertos.</p>
-                        </div>
-                        <div class="p-4">
-                            <span class="block text-4xl text-iteco-light mb-2">🛠️</span>
-                            <p class="font-semibold text-iteco-blue">Gestión Proactiva</p>
-                            <p class="text-sm text-gray-600">Monitoreo 24/7, parches y optimización de rendimiento continuo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección 3: Servicios ITC Detallados (Desde itc-servicios) -->
-        <section id="servicios-itc" class="py-16 sm:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-iteco-blue">Portafolio Completo de Servicios ITC</h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 1. Seguridad y Continuidad Operativa -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">🛡️</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Seguridad y Continuidad Operativa</h3>
-                        <p class="text-gray-600 text-sm">
-                            Soluciones de software de clase mundial para resguardar la seguridad y continuidad. Incluye monitoreo, detección de ransomware y planes de aseguramiento.
-                        </p>
-                    </div>
-
-                    <!-- 2. Auditoría de Sistemas -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">🔎</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Auditoría de Sistemas</h3>
-                        <p class="text-gray-600 text-sm">
-                            Análisis completo alineado con los objetivos del negocio: Seguridad, Producción, Testing, Ciclo de Desarrollo, Sistemas Críticos y Cumplimiento Normativo.
-                        </p>
-                    </div>
-
-                    <!-- 3. Outsourcing de Sistemas -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">🤝</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Outsourcing de Sistemas</h3>
-                        <p class="text-gray-600 text-sm">
-                            Asistencia continua de personal de informática, para proyectos o tareas permanentes. Aseguramos la optimización, profesionalismo y mejora de niveles de servicio.
-                        </p>
-                    </div>
-
-                    <!-- 4. Administración de Servidores (Repetición, pero detallada) -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">⚙️</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Administración Externa de Servidores</h3>
-                        <p class="text-gray-600 text-sm">
-                            Garantía de disponibilidad y rendimiento para sistemas críticos, bajo la responsabilidad de manos expertas y con tecnología de punta implementada.
-                        </p>
-                    </div>
-
-                    <!-- 5. Consultoría Softland -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">💡</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Consultoría e Implementación Softland</h3>
-                        <p class="text-gray-600 text-sm">
-                            Profesionales con vasta experiencia en Softland para asegurar una correcta parametrización, desarrollo de informes, interfaces y plena integración al negocio.
-                        </p>
-                    </div>
-
-                    <!-- 6. Instalación y Configuración de Redes -->
-                    <div class="p-6 rounded-xl border border-gray-200 service-card">
-                        <span class="block text-3xl text-iteco-light mb-3">🔗</span>
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Instalación y Configuración de Redes</h3>
-                        <p class="text-gray-600 text-sm">
-                            Cableado, instalación, configuración y administración de redes de datos. Habilitamos el mejor hardware de comunicaciones para cumplir con altos estándares.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección 4: Blog (Placeholder) -->
-        <section id="blog" class="py-16 sm:py-24 bg-iteco-gray">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-iteco-blue">Nuestro Blog de Tecnología y Negocios</h2>
-                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Manténgase actualizado con las últimas tendencias en Cloud ERP, Ciberseguridad y Gestión de Infraestructura.
-                </p>
-                
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Artículo 1 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 text-left service-card">
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-light">El Futuro del ERP en la Nube</h3>
-                        <p class="text-sm text-gray-500 mb-3">15 de Octubre, 2024</p>
-                        <p class="text-gray-600 text-sm">Análisis de los beneficios de migrar SAP B1 o Softland a una infraestructura administrada.</p>
-                        <a href="#" class="mt-4 inline-block text-iteco-blue text-sm font-medium hover:text-iteco-light transition duration-300">Leer Más →</a>
-                    </div>
-                    <!-- Artículo 2 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 text-left service-card">
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-light">Checklist de Ciberseguridad 2024</h3>
-                        <p class="text-sm text-gray-500 mb-3">3 de Septiembre, 2024</p>
-                        <p class="text-gray-600 text-sm">Pasos esenciales para proteger su infraestructura contra ataques de ransomware y vulnerabilidades.</p>
-                        <a href="#" class="mt-4 inline-block text-iteco-blue text-sm font-medium hover:text-iteco-light transition duration-300">Leer Más →</a>
-                    </div>
-                    <!-- Artículo 3 -->
-                    <div class="bg-white rounded-xl shadow-md p-6 text-left service-card">
-                        <h3 class="text-xl font-semibold mb-2 text-iteco-light">Optimización de SQL Server para ERP</h3>
-                        <p class="text-sm text-gray-500 mb-3">12 de Agosto, 2024</p>
-                        <p class="text-gray-600 text-sm">Técnicas clave utilizadas por ITECO para maximizar el rendimiento de bases de datos críticas.</p>
-                        <a href="#" class="mt-4 inline-block text-iteco-blue text-sm font-medium hover:text-iteco-light transition duration-300">Leer Más →</a>
-                    </div>
-                </div>
-                <a href="#" class="mt-12 inline-block bg-iteco-blue text-white px-6 py-3 rounded-xl font-bold shadow-xl hover:bg-iteco-light transition duration-300">
-                    Ver Todos los Artículos
-                </a>
-            </div>
-        </section>
-
-        <!-- Sección 5: Contacto/Formulario (contacto / contactoiteco) -->
-        <section id="contacto" class="py-16 sm:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-5xl mx-auto bg-iteco-gray p-8 sm:p-12 rounded-2xl shadow-2xl grid md:grid-cols-2 gap-10">
-                    
-                    <!-- Información de Contacto -->
+                <h2 class="text-3xl font-bold text-center mb-12 text-iteco-blue">¿Por Qué ITECO? Reducir Riesgo y Claridad en el Servicio</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
                     <div>
-                        <h2 class="text-3xl font-bold mb-4 text-iteco-blue">Contáctenos Directamente</h2>
-                        <p class="text-gray-600 mb-6">
-                            Estamos ubicados en Providencia, Santiago. Llámenos o envíenos un correo para iniciar su consultoría.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-iteco-light">📞</span>
-                                <p class="text-gray-700 font-semibold">Teléfono:</p>
-                                <p class="text-gray-600">(569) 3452 3370</p>
+                        <span class="block text-4xl mb-4 text-iteco-cyan">🛡️</span>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Máxima Continuidad Operativa</h3>
+                        <p class="text-gray-600 text-sm">Nuestros **Servidores Administrados Chile** y **Antiransomware con reversión automática** aseguran la disponibilidad total, lo que ayuda a **Reducir riesgo de falla sistemas**.</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl mb-4 text-iteco-cyan">💸</span>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Alternativa a Nubes Genéricas</h3>
+                        <p class="text-gray-600 text-sm">Somos una **Alternativa a la nube genérica**. Precios predecibles y justos en un modelo de **Outsorcing de sistemas** sin sorpresas.</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl mb-4 text-iteco-cyan">⚡</span>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Especialistas en ERP Crítico</h3>
+                        <p class="text-gray-600 text-sm">Plataformas optimizadas para el **Hosting de Aplicaciones Críticas** como **ERP Softland** y **ERP Sap B1**, con **Soporte ERP** garantizado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Herramientas (H2: Configurador de servidores online) - REDISEÑO DE CALCULADORA -->
+        <section id="herramientas" class="py-16 sm:py-24 bg-iteco-dark">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-white">
+                    Configurador de Servidores Online: <span class="text-iteco-cyan">Diseña tu Nube Privada</span>
+                </h2>
+                <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Define tus necesidades y obtén una estimación precisa para tus **Servidores de bases de datos Linux/Windows** con la mejor **Continuidad Operativa Cloud**.
+                </p>
+                
+                <div class="grid lg:grid-cols-3 gap-8 items-start">
+                    
+                    <!-- Calculadora Rediseñada (Columna principal) -->
+                    <div class="lg:col-span-2 calculator-container p-8 rounded-2xl">
+                        <form id="calculator-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <!-- Grupo de Inputs -->
+                            <div class="md:col-span-1">
+                                <label for="prop-purpose" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">1.</span> Propósito del Servidor (Crítico / ERP)</label>
+                                <select id="prop-purpose" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan">
+                                    <option value="otros">Otros / Básico</option>
+                                    <option value="web">Interfaces Web</option>
+                                    <option value="produccion">Producción / Logística</option>
+                                    <option value="erp">ERP (Softland/SAP B1)</option>
+                                </select>
                             </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="text-iteco-light">📧</span>
-                                <p class="text-gray-700 font-semibold">Email Corporativo:</p>
-                                <p class="text-gray-600">contactocorporativo@iteco.cl</p>
+                            <div class="md:col-span-1">
+                                <label for="prop-availability" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">2.</span> Nivel de Continuidad Operativa</label>
+                                <select id="prop-availability" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan">
+                                    <option value="nocturno">Uso nocturno / Batch</option>
+                                    <option value="jornada">Uso en jornada de trabajo</option>
+                                    <option value="continuo">Procesamiento continuo (7x24)</option>
+                                    <option value="critico">Misión Crítica (HA)</option>
+                                </select>
                             </div>
-                            <div class="flex items-start space-x-3">
-                                <span class="text-iteco-light">📍</span>
-                                <div>
-                                    <p class="text-gray-700 font-semibold">Dirección:</p>
-                                    <p class="text-gray-600">Las Bellotas 199, Providencia, Santiago de Chile.</p>
+                            <div class="md:col-span-1">
+                                <label for="prop-users" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">3.</span> Usuarios Concurrentes</label>
+                                <input type="number" id="prop-users" value="5" min="1" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan" style="color: white;">
+                            </div>
+                            <div class="md:col-span-1">
+                                <label for="prop-management" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">4.</span> Modalidad de Soporte ERP</label>
+                                <select id="prop-management" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan">
+                                    <option value="auto">Servidores Autogestionados (Menor costo)</option>
+                                    <option value="admin">Servidores Administrados (Soporte Local incluido)</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-1">
+                                <label for="prop-backup" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">5.</span> Tipo de Respaldo de datos</label>
+                                <select id="prop-backup" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan">
+                                    <option value="no">Sin respaldo</option>
+                                    <option value="semanal">Respaldo semanal</option>
+                                    <option value="diario">Respaldo diario</option>
+                                    <option value="replicacion">Replicación continua (HA)</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-1">
+                                <label for="prop-storage" class="block text-sm font-medium text-gray-200 mb-2 flex items-center"><span class="text-xl mr-2 text-iteco-cyan">6.</span> Almacenamiento Estimado (SSD/NVMe)</label>
+                                <select id="prop-storage" class="calculator-input block w-full p-3 bg-iteco-blue border-0 rounded-lg shadow-inner focus:ring-iteco-cyan focus:border-iteco-cyan">
+                                    <option value="200">Hasta 200GB</option>
+                                    <option value="500">De 200 a 500GB</option>
+                                    <option value="1000">De 500GB a 1TB</option>
+                                    <option value="2000">De 1 a 2TB</option>
+                                    <option value="4000">Más de 2TB</option>
+                                </select>
+                            </div>
+                        </form>
+                        
+                        <!-- Resultados de la Calculadora (CX Mejorado) -->
+                        <div class="mt-8 bg-iteco-blue p-6 rounded-xl text-center shadow-inner">
+                            <h3 class="text-lg font-semibold text-gray-300">Estimación de Inversión Mensual</h3>
+                            <div id="estimated-price" class="text-4xl font-extrabold my-2 text-iteco-cyan transition duration-500">UF 5,0 / mes</div>
+                            <div id="recommendation-text" class="text-sm text-gray-400">Recomendación Inicial.</div>
+                            <button id="btn-cotizar-final" class="btn-primary mt-6 w-full md:w-auto transform hover:scale-[1.02]">
+                                <span class="flex items-center justify-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 12l-4 4-4-4"></path></svg> Solicitar Cotización Formal</span>
+                            </button>
+                            <p class="text-xs text-gray-500 mt-4">*Esta es una estimación de **Servicios IaaS PaaS**. No incluye IVA ni licencias de software (ej. Windows Server).</p>
+                        </div>
+                    </div>
+
+                    <!-- Side Panel (GEO Info) -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-iteco-blue mb-4 flex items-center">
+                                <span class="text-iteco-cyan mr-2">📍</span> Soporte Local y GEO
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4">Estamos en **Macul, Santiago**. Ofrecemos **Soporte Local** con baja latencia y **Servidores en Chile**.</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>**Servidores en Chile**</span>
+                                    <span class="text-green-600 font-semibold">✅ Operativo</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>**Cloud ERP Integrado**</span>
+                                    <span class="text-green-600 font-semibold">✅ Disponible</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>**Antiransomware**</span>
+                                    <span class="text-green-600 font-semibold">✅ OK</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-iteco-blue mb-4 flex items-center">
+                                <span class="text-iteco-cyan mr-2">💡</span> ¿Tienes Dudas?
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4">Consulta a nuestro especialista virtual 24/7 sobre **Alternativas a la nube genérica**, **Auditoria de sistemas** o **Soporte ERP**.</p>
+                            <button onclick="toggleChat()" class="btn-primary w-full text-sm">
+                                Abrir Chat de Especialista
+                            </button>
+                        </div>
                     </div>
 
-                    <!-- Formulario -->
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4 text-iteco-blue">Formulario de Consulta</h3>
-                        <form id="contact-form" class="space-y-4">
-                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light" placeholder="Nombre Completo">
-                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light" placeholder="Correo Electrónico Corporativo">
-                            <select id="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light text-gray-600">
-                                <option value="">Seleccione su Requerimiento...</option>
-                                <option value="servidores">Servidores Administrados/Cloud</option>
-                                <option value="erp">Consultoría o Hosting SAP B1/Softland</option>
-                                <option value="seguridad">Seguridad y Continuidad Operativa</option>
-                                <option value="auditoria">Auditoría de Sistemas</option>
-                                <option value="outsourcing">Outsourcing de Personal IT</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                            <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light" placeholder="Detalle su consulta..."></textarea>
-                            <button type="submit" class="w-full bg-iteco-light text-white px-6 py-3 rounded-xl font-bold text-lg shadow-xl hover:bg-iteco-blue transition duration-300">
-                                Enviar Solicitud
-                            </button>
-                        </form>
-                         <!-- Contenedor para mensajes de estado -->
-                        <div id="status-message" class="mt-4 p-4 rounded-lg hidden text-center font-semibold"></div>
-                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Sección Seguridad (KW: Antiransomware con reversión automática, Cumplimiento Normativo ISO 27001) -->
+        <section id="seguridad" class="py-16 sm:py-24 bg-iteco-light">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-iteco-blue">
+                    Seguridad: <span class="text-iteco-cyan">Antiransomware con Reversión Automática</span>
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto text-sm">
+                    Una solución completa para asegurar la **Continuidad Operativa Cloud** y el **Cumplimiento Normativo ISO 27001**.
+                </p>
+
+                <!-- Tabla de Seguridad Avanzada + EDR -->
+                <div class="max-w-6xl mx-auto shadow-2xl overflow-hidden rounded-lg">
+                    <table class="w-full">
+                        <thead class="bg-iteco-dark text-white">
+                            <tr>
+                                <th class="p-4 text-left font-bold" style="width: 30%;">Paquete de Seguridad</th>
+                                <th class="p-4 text-left font-bold">Funcionalidades Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- Seguridad Avanzada -->
+                            <tr class="bg-orange-50 hover:bg-orange-100 transition duration-300">
+                                <td class="p-4 font-bold text-iteco-blue align-top">Seguridad Avanzada</td>
+                                <td class="p-4 text-gray-700">
+                                    <ul class="list-disc list-inside text-sm space-y-1">
+                                        <li>Detección basada en el comportamiento y Prevención de la explotación.</li>
+                                        <li>**Antiransomware con reversión automática** (clave para **Cloud ERP Integrado**).</li>
+                                        <li>Evaluaciones de vulnerabilidad y **Cumplimiento Normativo ISO 27001**.</li>
+                                        <li>Control de dispositivos y Filtrado de URL.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <!-- + EDR -->
+                            <tr class="bg-iteco-blue/90 text-white hover:bg-iteco-blue transition duration-300">
+                                <td class="p-4 font-bold text-iteco-cyan align-top">+ EDR (Detection & Response)</td>
+                                <td class="p-4">
+                                    <ul class="list-disc list-inside text-sm space-y-1">
+                                        <li>Supervisión de eventos y Correlación automática de sucesos.</li>
+                                        <li>Visualización de la cadena de ataque MITRE ATT&CK.</li>
+                                        <li>Respuesta a incidentes con un solo clic.</li>
+                                        <li>Recogida de datos forenses y Búsqueda inteligente de IoC.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Contacto / Final CTA -->
+        <section id="contacto" class="py-16 sm:py-24" style="background: #0f172a;"> <!-- slate-900 -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Alternativas a la Nube Genérica: Hablemos</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Si busca **Servidores Administrados Chile** que **Reducir riesgo de falla sistemas**, su solución es ITECO.
+                </p>
+                <!-- Formulario de Contacto Mockup (para capturar leads) -->
+                <form id="contact-form" class="max-w-xl mx-auto space-y-4 bg-white p-8 rounded-xl shadow-2xl">
+                    <input type="text" id="contact-name" placeholder="Nombre y Apellido" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-iteco-dark">
+                    <input type="email" id="contact-email" placeholder="Email Corporativo" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-iteco-dark">
+                    <input type="text" id="contact-company" placeholder="Empresa (PYME)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-iteco-dark">
+                    <textarea id="contact-message" rows="4" placeholder="Mensaje o parámetros de configuración de servidor" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-iteco-dark"></textarea>
+                    <input type="hidden" id="config-summary" name="config-summary">
+                    <button type="submit" class="w-full btn-primary px-8 py-3">
+                        Solicitar mi Cotización
+                    </button>
+                    <p id="form-message" class="text-sm text-center text-green-500 hidden"></p>
+                </form>
             </div>
         </section>
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left sm:flex justify-between items-center">
-            <div class="mb-4 sm:mb-0">
-                <p class="text-lg font-semibold">ITECO Ingeniería LTDA.</p>
-                <p class="text-sm text-gray-400">Las Bellotas 199, Providencia, Santiago de Chile.</p>
-                <p class="text-sm text-gray-400">© 2024 Todos los derechos reservados.</p>
-            </div>
-            <div class="flex justify-center sm:justify-end space-x-6 text-gray-400">
-                <a href="#" class="hover:text-iteco-light transition duration-300">Política de Privacidad</a>
-                <a href="#" class="hover:text-iteco-light transition duration-300">Política de Cookies</a>
-                <a href="#" class="hover:text-iteco-light transition duration-300">Términos de Uso</a>
+    <!-- Pie de Página (KW: Soporte Local) -->
+    <footer class="bg-iteco-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-500">© 2025 ITECO Ingeniería LTDA. **Servidores en Chile** | Soporte Local en Macul | Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript para el Menú Móvil y el Formulario -->
-    <script>
+    <!-- ------------------ Chatbot Flotante (Gemini Specialist) ------------------ -->
+
+    <!-- Botón Flotante -->
+    <div id="chat-button" class="bg-iteco-cyan p-4 rounded-full shadow-3xl">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 4v-4z"></path></svg>
+    </div>
+
+    <!-- Ventana del Chat -->
+    <div id="chat-window" class="hidden">
+        <div class="chat-header rounded-t-xl flex justify-between items-center">
+            <h4 class="font-bold text-lg">Especialista ITECO (IA)</h4>
+            <button onclick="toggleChat()" class="text-white hover:text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        
+        <div id="chat-messages" class="chat-body flex flex-col">
+            <!-- Mensaje de bienvenida -->
+            <div class="chat-message-ai">
+                ¡Hola! Soy tu Especialista ITECO virtual. ¿En qué puedo ayudarte hoy respecto a **Servidores Administrados Chile**, **Cloud ERP** o **Continuidad Operativa**?
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <form id="chat-form" class="flex">
+                <input type="text" id="chat-input" placeholder="Pregunta sobre ERP Softland, Seguridad..." class="w-full p-2 border border-gray-300 rounded-l-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-iteco-dark">
+                <button type="submit" id="send-button" class="bg-iteco-cyan p-2 rounded-r-lg text-white hover:bg-iteco-blue transition duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </form>
+            <p id="chat-error" class="text-xs text-red-500 mt-1 hidden">Error: Intenta nuevamente más tarde.</p>
+        </div>
+    </div>
+    <!-- ------------------ FIN Chatbot Flotante ------------------ -->
+
+    <!-- JavaScript para el Menú Móvil, la Calculadora (CX) y el Chatbot (IA) -->
+    <script type="module">
+        // Importaciones de Firebase (Requeridas por el Canvas, aunque la DB no se use para el chat)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Globales de Firebase (Para cumplir con el requisito de Canvas)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+
+        // 1. Inicialización y Autenticación de Firebase (Boilerplate Requerido)
+        try {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+
+            if (initialAuthToken) {
+                await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+                await signInAnonymously(auth);
+            }
+        } catch (error) {
+            console.error("Firebase Auth Error:", error);
+        }
+
+        // 2. Lógica del Chatbot de ITECO (Gemini API)
+        const chatWindow = document.getElementById('chat-window');
+        const chatButton = document.getElementById('chat-button');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        const sendButton = document.getElementById('send-button');
+        const chatError = document.getElementById('chat-error');
+        
+        // Historial de chat (para mantener el contexto)
+        const chatHistory = [];
+
+        // Definición de la IA: Especialista de ITECO
+        const systemPrompt = "Actúa como un Especialista en Infraestructura y Cloud de ITECO. Tu objetivo es ser totalmente transparente, claro, informativo y experto. Ofrece siempre soluciones centradas en el cliente, enfocadas en Servidores Administrados Chile, Cloud ERP, Continuidad Operativa, Respaldo de datos, Seguridad (Antiransomware) y Soporte Local para PYMES. Responde solo en español y de forma concisa. Nunca menciones que eres un modelo de lenguaje. Si el usuario pregunta por costos, redirígelo a usar el 'Configurador de Servidores Online' o a contactar formalmente a ITECO.";
+        
+        // Función para mostrar/ocultar el chat
+        window.toggleChat = function() {
+            chatWindow.classList.toggle('hidden');
+            chatWindow.style.display = chatWindow.classList.contains('hidden') ? 'none' : 'flex';
+            if (!chatWindow.classList.contains('hidden')) {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                chatInput.focus();
+            }
+        };
+
+        // Evento para el botón flotante
+        chatButton.addEventListener('click', window.toggleChat);
+
+        // Renderiza el mensaje en el chat
+        function renderMessage(text, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = isUser ? 'chat-message-user' : 'chat-message-ai';
+            messageDiv.innerText = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Simula la espera (Loading state)
+        function showLoading() {
+            const loading = document.createElement('div');
+            loading.id = 'loading-dots';
+            loading.className = 'chat-message-ai';
+            loading.innerHTML = '<span>.</span><span>.</span><span>.</span>';
+            chatMessages.appendChild(loading);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            sendButton.disabled = true;
+            chatInput.disabled = true;
+        }
+
+        // Remueve la simulación de espera
+        function hideLoading() {
+            const loading = document.getElementById('loading-dots');
+            if (loading) {
+                loading.remove();
+            }
+            sendButton.disabled = false;
+            chatInput.disabled = false;
+        }
+
+        // Llama a la API de Gemini
+        async function getGeminiResponse(userQuery) {
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            // Agregar la consulta del usuario al historial
+            chatHistory.push({ role: "user", parts: [{ text: userQuery }] });
+
+            const payload = {
+                contents: chatHistory,
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                tools: [{ "google_search": {} }],
+            };
+            
+            let response, result;
+            try {
+                // Implementación de reintento con backoff exponencial
+                for (let i = 0; i < 3; i++) {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        result = await response.json();
+                        break; 
+                    } else if (i < 2) {
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                    } else {
+                        throw new Error(`API failed after ${i + 1} retries.`);
+                    }
+                }
+                
+                const candidate = result?.candidates?.[0];
+                const text = candidate?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    // Agregar la respuesta de la IA al historial
+                    chatHistory.push({ role: "model", parts: [{ text: text }] });
+                    return text;
+                } else {
+                    return "Lo siento, no pude obtener una respuesta clara del sistema. Por favor, reformula tu pregunta.";
+                }
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                return "Hubo un problema de conexión con el especialista virtual. Por favor, intenta de nuevo en un momento.";
+            }
+        }
+
+        // Manejador de envío del formulario de chat
+        chatForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const userQuery = chatInput.value.trim();
+            if (!userQuery) return;
+
+            renderMessage(userQuery, true);
+            chatInput.value = '';
+
+            showLoading();
+            const aiResponse = await getGeminiResponse(userQuery);
+            hideLoading();
+            renderMessage(aiResponse, false);
+        });
+
+        // 3. Lógica de la Calculadora y Navegación
+        const calculatorForm = document.getElementById('calculator-form');
+        const priceElement = document.getElementById('estimated-price');
+        const recommendationElement = document.getElementById('recommendation-text');
+        const cotizarButton = document.getElementById('btn-cotizar-final');
+        const configSummaryField = document.getElementById('config-summary');
+        const contactMessage = document.getElementById('contact-message');
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+
         // Lógica del Menú Móvil
-        document.getElementById('menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Lógica del Formulario de Contacto
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        // Lógica de cálculo de precios
+        function calculatePrice() {
+            let basePrice = 5.0; 
+            let users = parseInt(document.getElementById('prop-users').value) || 1;
+
+            // 1. Propósito
+            const purpose = document.getElementById('prop-purpose').value;
+            let purposeText = "Básico";
+            switch(purpose) {
+                case 'web': basePrice += 3; purposeText = "Web/Interfaces"; break;
+                case 'produccion': basePrice += 10; purposeText = "Producción/Logística"; break;
+                case 'erp': basePrice += 25; purposeText = "Misión Crítica ERP (Softland/SAP B1)"; break;
+            }
+
+            // 2. Disponibilidad (Continuidad Operativa)
+            const availability = document.getElementById('prop-availability').value;
+            let availText = "Uso Nocturno";
+            switch(availability) {
+                case 'jornada': basePrice += 5; availText = "Uso en Jornada"; break;
+                case 'continuo': basePrice += 12; availText = "Procesamiento 7x24"; break;
+                case 'critico': basePrice += 20; availText = "Misión Crítica (HA)"; break;
+            }
+
+            // 3. Usuarios
+            basePrice += (users * 0.35); // Costo por usuario
+
+            // 4. Modalidad (Servidores Administrados o Autogestionados)
+            const management = document.getElementById('prop-management').value;
+            let mgmtText = "Autogestionado";
+            if (management === 'admin') {
+                basePrice += 18; 
+                mgmtText = "Administrado por ITECO (Soporte Local)";
+            }
+
+            // 5. Respaldo (Respaldo de datos)
+            const backup = document.getElementById('prop-backup').value;
+            let backupText = "Sin Respaldo";
+            switch(backup) {
+                case 'semanal': basePrice += 6; backupText = "Respaldo Semanal"; break;
+                case 'diario': basePrice += 12; backupText = "Respaldo Diario"; break;
+                case 'replicacion': basePrice += 35; backupText = "Replicación Continua (HA)"; break;
+            }
+
+            // 6. Almacenamiento
+            const storage = document.getElementById('prop-storage').value;
+            let storageText = `200GB (Base)`;
+            if (storage === '500') { basePrice += 6; storageText = "500GB"; }
+            else if (storage === '1000') { basePrice += 15; storageText = "1TB"; }
+            else if (storage === '2000') { basePrice += 28; storageText = "2TB"; }
+            else if (storage === '4000') { basePrice += 50; storageText = ">2TB"; }
+            
+            // Construir resumen para el lead (Campo oculto)
+            const finalConfigSummary = `
+                Configuración Solicitada: 
+                Propósito: ${purposeText}, 
+                Continuidad: ${availText}, 
+                Usuarios: ${users}, 
+                Modalidad: ${mgmtText}, 
+                Respaldo: ${backupText}, 
+                Almacenamiento: ${storageText}.
+                PRECIO ESTIMADO: UF ${basePrice.toFixed(1)} / mes.
+            `;
+
+            // Actualizar UI
+            priceElement.innerText = 'UF ' + basePrice.toFixed(1) + ' / mes';
+            recommendationElement.innerHTML = `**Propósito:** ${purposeText} | **Disponibilidad:** ${availText} | **Modalidad:** ${mgmtText}`;
+            configSummaryField.value = finalConfigSummary.trim();
+        }
+
+        // Event listener para actualizar en cada cambio
+        calculatorForm.addEventListener('change', calculatePrice);
+        calculatorForm.addEventListener('input', calculatePrice);
+
+        // Lógica para pre-llenar el formulario de contacto con la configuración (CX)
+        cotizarButton.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            const form = e.target;
-            const statusMessage = document.getElementById('status-message');
-            
-            // Simulación de envío de datos (en un entorno real, aquí iría la llamada a la API)
-            console.log('Formulario de Contacto enviado:', {
-                name: form.elements['name'].value,
-                email: form.elements['email'].value,
-                service: form.elements['service'].value,
-                message: form.elements['message'].value
-            });
+            // Scroll suave hasta el formulario de contacto
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
 
-            // Mostrar mensaje de éxito (reemplazando alert())
-            statusMessage.textContent = '¡Mensaje Enviado! Un experto de ITECO le contactará a su correo corporativo a la brevedad.';
-            statusMessage.classList.remove('hidden');
-            statusMessage.classList.add('bg-green-100', 'text-green-700');
+            // Rellenar el mensaje con el resumen de la configuración
+            const summary = configSummaryField.value;
+            contactMessage.value = "Estimados, estoy interesado en una cotización formal para la siguiente configuración:\n\n" + summary + "\n\nPor favor, contactarme para discutir los detalles.";
             
-            // Limpiar formulario
-            form.reset();
-
-            // Ocultar mensaje después de 5 segundos
-            setTimeout(() => {
-                statusMessage.classList.add('hidden');
-            }, 5000);
+            document.getElementById('contact-name').focus();
         });
+
+        // Simulación de envío de formulario (CX)
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formMessage.innerText = "¡Mensaje Enviado con Éxito! Un especialista de ITECO se pondrá en contacto pronto.";
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('text-green-600');
+            setTimeout(() => {
+                contactForm.reset();
+                formMessage.classList.add('hidden');
+                // Limpiar mensaje prellenado después del envío
+                contactMessage.value = ''; 
+                // Recalcular para resetear el precio en la calculadora
+                calculatePrice();
+            }, 3000);
+        });
+        
+        // Calcular el precio inicial al cargar la página
+        calculatePrice();
     </script>
 </body>
 </html>
