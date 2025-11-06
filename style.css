@@ -1,0 +1,130 @@
+/* -------------------------------------------------------------------------
+   Estilos ITECO Ingeniería - Archivo style.css
+   Contiene variables de color, estilos de header y chatbot
+---------------------------------------------------------------------------- */
+
+/* Definición de Colores Corporativos para el CSS */
+:root {
+    --iteco-cyan: #00bcd4; /* Azul Turquesa Brillante */
+    --iteco-dark: #1f2937; /* Gris Oscuro/Azul Oscuro */
+    --iteco-primary: #0076a3; /* Azul Principal */
+    --iteco-soft: #f3f4f6; /* Gris muy claro para fondos */
+}
+
+/* Clases de utilidad para referenciar los colores */
+.text-iteco-cyan { color: var(--iteco-cyan); }
+.bg-iteco-cyan { background-color: var(--iteco-cyan); }
+.text-iteco-dark { color: var(--iteco-dark); }
+.bg-iteco-dark { background-color: var(--iteco-dark); }
+.bg-iteco-primary { background-color: var(--iteco-primary); }
+.text-iteco-primary { color: var(--iteco-primary); }
+.bg-iteco-soft { background-color: var(--iteco-soft); }
+
+/* Estilo para la Cabecera/Header */
+.header-bg {
+    /* Imagen de fondo de Pexels - Máxima resolución para el servidor */
+    background-image: url('https://images.pexels.com/photos/313736/pexels-photo-313736.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Color de fondo si la imagen falla */
+    background-color: var(--iteco-dark); 
+}
+/* Capa de Opacidad para contraste (Asegura legibilidad del texto blanco) */
+.header-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--iteco-dark);
+    opacity: 0.85; 
+    z-index: 1;
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Scroll Suave para la navegación interna */
+html {
+    scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------------
+   Estilos de la Calculadora/Configurador
+---------------------------------------------------------------------------- */
+.calculator-step {
+    display: none;
+}
+.calculator-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------------------------------
+   Estilos para el Chatbot
+---------------------------------------------------------------------------- */
+#chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#chat-window {
+    height: 400px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    display: none; /* Inicialmente oculto */
+    background-color: white;
+    overflow: hidden;
+    flex-direction: column;
+}
+#chat-toggle {
+    height: 60px;
+    width: 60px;
+    background-color: var(--iteco-cyan);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+#chat-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de mensajes */
+.message-iteco {
+    background-color: var(--iteco-soft);
+    color: var(--iteco-dark);
+    border-radius: 12px 12px 12px 0;
+    align-self: flex-start;
+}
+.message-user {
+    background-color: var(--iteco-cyan);
+    color: white;
+    border-radius: 12px 12px 0 12px;
+    align-self: flex-end;
+}
+
+/* Placeholder de Imagen de Error (Visualización cuando el fallback falla) */
+.image-error {
+    background-color: #fca5a5; /* Rojo suave */
+    color: #b91c1c; /* Rojo oscuro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+}
