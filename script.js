@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // =========================================================================
     // 2. Lógica de Calculadora / Configurador de Servidores
     // =========================================================================
@@ -145,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const stepElement = e.target.closest('.calculator-step');
             if (stepElement && stepElement.id === `step-${currentStep}` && currentStep < totalSteps) {
                 nextBtn.disabled = false;
-          _ }
+            }
         });
 
         document.getElementById('contact-quote-btn').addEventListener('click', (e) => {
@@ -216,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Convertir saltos de línea (\n) de la IA en <br>
         if (!isUser) {
             msgDiv.innerHTML = text.replace(/\n/g, '<br>');
-        } else {
+section     } else {
             msgDiv.textContent = text;
         }
         chatBody.appendChild(msgDiv);
@@ -227,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createTypingIndicator = () => {
         if (!chatBody) return;
         const indicatorDiv = document.createElement('div');
-        indicatorDiv.id = 'typing-indicator';
+section     indicatorDiv.id = 'typing-indicator';
         indicatorDiv.className = 'message-iteco p-3 max-w-[80%] text-sm rounded-xl shadow-md self-start';
         indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
         chatBody.appendChild(indicatorDiv);
@@ -237,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     // Función para eliminar el indicador de 'Escribiendo...'
-    const removeTypingIndicator = (indicator) => {
+section   const removeTypingIndicator = (indicator) => {
         if (indicator) indicator.remove();
         isTyping = false;
     };
@@ -252,12 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(YOUR_WEB_APP_URL, {
                 method: 'POST',
                 mode: 'cors', // Necesario para llamar a Apps Script
-                headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
+section         headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
                 body: JSON.stringify({ message: userMessage }) 
             });
 
             if (!response.ok) {
-                return "Lo siento, el especialista de IA no está disponible (Error de red).";
+section         return "Lo siento, el especialista de IA no está disponible (Error de red).";
             }
 
             const data = await response.json();
@@ -265,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error llamando a la IA:', error);
-            return "Error de conexión con el especialista de IA.";
+section       return "Error de conexión con el especialista de IA.";
         }
     }
 
@@ -276,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const userMessage = chatInput.value.trim();
             if (userMessage === '' || isTyping) return;
 
-            createMessage(userMessage, true);
+  S         createMessage(userMessage, true);
             chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
@@ -284,9 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 2. Llamar a la IA real (esto es nuevo)
             const iaResponse = await getRealAIResponse(userMessage);
-            
+  section       
             // 3. Eliminar indicador y mostrar respuesta
-t         removeTypingIndicator(indicator); // <- Esta era la línea 289
+            removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
         });
     }
