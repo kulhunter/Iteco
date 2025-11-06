@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------
-// script.js - Versión final final final esta sí que sí, te lo juro
+// script.js - Versión final lista ESTA SI QUE SI V2
 // - Navegación móvil
 // - Calculadora / Configurador (4 pasos)
 // - Chatbot conectado a Apps Script (URL ya configurada)
