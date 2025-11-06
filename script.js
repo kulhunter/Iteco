@@ -194,109 +194,109 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================================================================
-// 3. Lógica del Chatbot IA (Simulado y Corregido)
-// =========================================================================
+    // 3. Lógica del Chatbot IA (Simulado y Corregido)
+    // =========================================================================
 
-const chatToggle = document.getElementById('chat-toggle');
-const chatWindow = document.getElementById('chat-window');
-const chatBody = document.getElementById('chat-body');
-const chatForm = document.getElementById('chat-form');
-const chatInput = document.getElementById('chat-input');
-let isTyping = false; // Estado para evitar spam de mensajes
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const chatBody = document.getElementById('chat-body');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    let isTyping = false; // Estado para evitar spam de mensajes
 
-// *** ¡ESTA ES LA LÍNEA QUE FALTABA! ***
-// Conecta el botón flotante (chatToggle) a la función toggleChat.
-chatToggle.addEventListener('click', toggleChat);
+    // ⬇️ *** ESTA ES LA LÍNEA QUE FALTABA *** ⬇️
+    // Conecta el botón flotante (chatToggle) a la función toggleChat.
+    chatToggle.addEventListener('click', toggleChat);
 
-// La función que estaba dando error, ahora declarada globalmente (window.)
-// Esta función es llamada por el botón 'X' (onclick) Y ahora también por el botón flotante.
-window.toggleChat = () => {
-    // Usamos 'flex' porque así está definido en tu HTML (flex-col)
-    // Si usaras 'block', el layout interno se rompería.
-    const isChatOpen = chatWindow.style.display === 'flex';
-    
-    chatWindow.style.display = isChatOpen ? 'none' : 'flex';
-    chatToggle.style.display = isChatOpen ? 'flex' : 'none'; // Oculta el botón flotante si el chat está abierto
-    
-    if (!isChatOpen) {
-        chatInput.focus();
-    }
-};
+    // Función mejorada para abrir/cerrar el chat
+    window.toggleChat = () => {
+        // Comprueba si la ventana está abierta (si su display es 'flex')
+        const isChatOpen = chatWindow.style.display === 'flex';
 
-// Función para crear un nuevo mensaje
-const createMessage = (text, isUser) => {
-    const msgDiv = document.createElement('div');
-    msgDiv.className = `p-3 max-w-[80%] text-sm rounded-xl shadow-md ${isUser ? 'message-user self-end' : 'message-iteco self-start'}`;
-    msgDiv.textContent = text;
-    chatBody.appendChild(msgDiv);
-    chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
-    return msgDiv; // Retornar el elemento creado
-};
+        if (isChatOpen) {
+            // Si está abierta, CIÉRRALA
+            chatWindow.style.display = 'none';
+            chatToggle.style.display = 'flex'; // Muestra el botón flotante
+        } else {
+            // Si está cerrada (o es la primera vez), ÁBRELA
+            chatWindow.style.display = 'flex';
+            chatToggle.style.display = 'none'; // Oculta el botón flotante
+            chatInput.focus();
+        }
+    };
 
-// Función para crear el indicador de 'Escribiendo...'
-const createTypingIndicator = () => {
-    const indicatorDiv = document.createElement('div');
-    indicatorDiv.id = 'typing-indicator';
-    indicatorDiv.className = 'message-iteco p-3 max-w-[80%] text-sm rounded-xl shadow-md self-start';
-    indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
-    chatBody.appendChild(indicatorDiv);
-    chatBody.scrollTop = chatBody.scrollHeight;
-    isTyping = true;
-    return indicatorDiv;
-};
+    // Función para crear un nuevo mensaje
+    const createMessage = (text, isUser) => {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `p-3 max-w-[80%] text-sm rounded-xl shadow-md ${isUser ? 'message-user self-end' : 'message-iteco self-start'}`;
+        msgDiv.textContent = text;
+        chatBody.appendChild(msgDiv);
+        chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
+        return msgDiv; // Retornar el elemento creado
+    };
+    
+    // Función para crear el indicador de 'Escribiendo...'
+    const createTypingIndicator = () => {
+        const indicatorDiv = document.createElement('div');
+        indicatorDiv.id = 'typing-indicator';
+        indicatorDiv.className = 'message-iteco p-3 max-w-[80%] text-sm rounded-xl shadow-md self-start';
+        indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
+        chatBody.appendChild(indicatorDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+        isTyping = true;
+        return indicatorDiv;
+    };
+    
+    // Función para eliminar el indicador de 'Escribiendo...'
+    const removeTypingIndicator = (indicator) => {
+        if (indicator) {
+            indicator.remove();
+        }
+        isTyping = false;
+    };
 
-// Función para eliminar el indicador de 'Escribiendo...'
-const removeTypingIndicator = (indicator) => {
-    if (indicator) {
-        indicator.remove();
-    }
-    isTyping = false;
-};
+    // Simulación de respuesta de IA basada en keywords
+    const getSimulatedIAResponse = (userMessage) => {
+        const msg = userMessage.toLowerCase();
+        
+        if (msg.includes('servidor') || msg.includes('hosting')) {
+            return "Nuestros Servidores Administrados en Chile garantizan Soporte Local y redundancia. Son ideales para ERPs. ¿Necesitas Linux o Windows?";
+        }
+        if (msg.includes('erp') || msg.includes('softland') || msg.includes('sap')) {
+            return "Somos especialistas en Cloud ERP, incluyendo Softland y SAP B1. Podemos hostear tu plataforma y ofrecer consultoría. ¿Cuál es el ERP que usas actualmente?";
+        }
+        if (msg.includes('precio') || msg.includes('costo') || msg.includes('cotizar')) {
+            return "Para darte un precio exacto, usa nuestro Configurador de Servidores (la sección de 'Configurador' arriba). Es la forma más rápida de obtener un estimado de IaaS. ¡Es un servicio gratuito!";
+section     }
+        if (msg.includes('seguridad') || msg.includes('ransomware') || msg.includes('continuidad')) {
+            return "Ofrecemos Continuidad Operativa Cloud con Antiransomware y reversión automática. Garantizamos el Respaldo de datos y cumplimiento ISO 27001. ¿Te preocupa algún riesgo específico?";
+        }
+        if (msg.includes('contacto') || msg.includes('llamada')) {
+            return "Puedes llenar el formulario en la sección Contacto o llamar al (569) 3452 3370. Nuestro equipo te atenderá de inmediato.";
+        }
+        
+        return "Gracias por tu pregunta. Soy tu especialista ITECO. ¿Podrías ser más específico sobre tu necesidad de infraestructura, ERP o seguridad para poder ayudarte mejor?";
+    };
 
-// Simulación de respuesta de IA basada en keywords
-const getSimulatedIAResponse = (userMessage) => {
-    const msg = userMessage.toLowerCase();
-    
-    if (msg.includes('servidor') || msg.includes('hosting')) {
-        return "Nuestros Servidores Administrados en Chile garantizan Soporte Local y redundancia. Son ideales para ERPs. ¿Necesitas Linux o Windows?";
-    }
-    if (msg.includes('erp') || msg.includes('softland') || msg.includes('sap')) {
-        return "Somos especialistas en Cloud ERP, incluyendo Softland y SAP B1. Podemos hostear tu plataforma y ofrecer consultoría. ¿Cuál es el ERP que usas actualmente?";
-    }
-    if (msg.includes('precio') || msg.includes('costo') || msg.includes('cotizar')) {
-        return "Para darte un precio exacto, usa nuestro Configurador de Servidores (la sección de 'Configurador' arriba). Es la forma más rápida de obtener un estimado de IaaS. ¡Es un servicio gratuito!";
-    }
-    if (msg.includes('seguridad') || msg.includes('ransomware') || msg.includes('continuidad')) {
-        return "Ofrecemos Continuidad Operativa Cloud con Antiransomware y reversión automática. Garantizamos el Respaldo de datos y cumplimiento ISO 27001. ¿Te preocupa algún riesgo específico?";
-    }
-    if (msg.includes('contacto') || msg.includes('llamada')) {
-        return "Puedes llenar el formulario en la sección Contacto o llamar al (569) 3452 3370. Nuestro equipo te atenderá de inmediato.";
-    }
-    
-    return "Gracias por tu pregunta. Soy tu especialista ITECO. ¿Podrías ser más específico sobre tu necesidad de infraestructura, ERP o seguridad para poder ayudarte mejor?";
-};
+    // Manejo del formulario de chat
+    chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const userMessage = chatInput.value.trim();
+        if (userMessage === '' || isTyping) return;
 
-// Manejo del formulario de chat
-chatForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const userMessage = chatInput.value.trim();
-    if (userMessage === '' || isTyping) return;
+        createMessage(userMessage, true);
+        chatInput.value = '';
 
-    createMessage(userMessage, true);
-    chatInput.value = '';
+        // 1. Mostrar indicador de "Escribiendo..."
+        const indicator = createTypingIndicator();
 
-    // 1. Mostrar indicador de "Escribiendo..."
-    const indicator = createTypingIndicator();
-
-    // 2. Simular tiempo de espera para la respuesta de la IA
-    setTimeout(() => {
-        const iaResponse = getSimulatedIAResponse(userMessage);
-        
-        // 3. Eliminar indicador y mostrar respuesta
-        removeTypingIndicator(indicator);
-        createMessage(iaResponse, false);
-    }, 1200); // 1.2 segundos para simular la respuesta
+        // 2. Simular tiempo de espera para la respuesta de la IA
+        setTimeout(() => {
+            const iaResponse = getSimulatedIAResponse(userMessage);
+s            
+            // 3. Eliminar indicador y mostrar respuesta
+            removeTypingIndicator(indicator);
+            createMessage(iaResponse, false);
+        }, 1200); // 1.2 segundos para simular la respuesta
+    });
 });
-
-// Corrección extra: Ocultar el botón flotante cuando el chat está abierto, para no molestar al usuario mientras navega (ajÁ)
-// (Modifiqué la función toggleChat arriba para incluir esto)
