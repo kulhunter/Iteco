@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const stepElement = e.target.closest('.calculator-step');
             if (stepElement && stepElement.id === `step-${currentStep}` && currentStep < totalSteps) {
                 nextBtn.disabled = false;
-            }
+          _ }
         });
 
         document.getElementById('contact-quote-btn').addEventListener('click', (e) => {
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (userMessage === '' || isTyping) return;
 
             createMessage(userMessage, true);
-  V         chatInput.value = '';
+            chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
             const indicator = createTypingIndicator();
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const iaResponse = await getRealAIResponse(userMessage);
             
             // 3. Eliminar indicador y mostrar respuesta
-            removeTypingIndicator(indicator);
+t         removeTypingIndicator(indicator); // <- Esta era la línea 289
             createMessage(iaResponse, false);
         });
     }
