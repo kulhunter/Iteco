@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (userMessage === '' || isTyping) return;
 
             createMessage(userMessage, true);
-            chatInput.value = '';
+  V         chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
             const indicator = createTypingIndicator();
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const iaResponse = await getRealAIResponse(userMessage);
             
             // 3. Eliminar indicador y mostrar respuesta
-trim         removeTypingIndicator(indicator);
+            removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
         });
     }
