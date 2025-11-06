@@ -157,10 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
                              `Usuarios: ${tierNames[calculatorState.users]}\n` +
                              `Respaldo: ${backupNames[calculatorState.backup]}\n` +
                              `Precio Estimado (IaaS+Admin): ${document.getElementById('estimated-price').textContent}\n\n` +
-ar                     `Por favor, contáctenme.`;
+                             `Por favor, contáctenme.`;
                 contactMessage.value = quoteMessage;
                 document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-A           }
+            }
         });
 
         // Inicializar la calculadora
@@ -204,7 +204,7 @@ A           }
     // 3. CONECTAR EL BOTÓN FLOTANTE
     if (chatToggle) {
         chatToggle.addEventListener('click', toggleChat);
-A   }
+    }
 
     // --- Lógica del Chat ---
 
@@ -263,7 +263,7 @@ A   }
             const data = await response.json();
             return data.reply; // 'reply' es lo que definimos en el Apps Script
 
-  D     } catch (error) {
+        } catch (error) {
             console.error('Error llamando a la IA:', error);
             return "Error de conexión con el especialista de IA.";
         }
@@ -274,7 +274,7 @@ A   }
         chatForm.addEventListener('submit', async (e) => { // <- 'async' es nuevo
             e.preventDefault();
             const userMessage = chatInput.value.trim();
-A         if (userMessage === '' || isTyping) return;
+            if (userMessage === '' || isTyping) return;
 
             createMessage(userMessage, true);
             chatInput.value = '';
@@ -286,7 +286,7 @@ A         if (userMessage === '' || isTyping) return;
             const iaResponse = await getRealAIResponse(userMessage);
             
             // 3. Eliminar indicador y mostrar respuesta
-            removeTypingIndicator(indicator);
+read       removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
         });
     }
