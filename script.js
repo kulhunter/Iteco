@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!input) return;
                     calculatorState[input.name] = input.value;
                     currentStep = Math.min(currentStep + 1, totalSteps);
-      _         }
+                }
             } else if (direction === 'prev' && currentStep > 1) {
                 currentStep = Math.max(currentStep - 1, 1);
             }
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                              `Por favor, contáctenme.`;
                 contactMessage.value = quoteMessage;
                 document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-nbsp;          }
+            }
         });
 
         // Inicializar la calculadora
@@ -172,7 +172,7 @@ nbsp;          }
     // 3. Lógica del Chatbot IA (CONECTADO A IA REAL)
     // =========================================================================
 
-    // --- ⬇️ URL de tu intermediario (Apps Script) ⬇️ ---
+    // --- URL de tu intermediario (Apps Script) ---
     const YOUR_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwguteU6czzhSoSIgus14ygBtjj1EPZPJyeHQkXR3_0vvkQgJ3aRx7nIBG2uBkPDoS1/exec';
     // ----------------------------------------------------
 
@@ -183,7 +183,7 @@ nbsp;          }
     const chatInput = document.getElementById('chat-input');
     let isTyping = false;
 
-s   // 1. DEFINIR LA FUNCIÓN PRIMERO
+    // 1. DEFINIR LA FUNCIÓN PRIMERO
     const toggleChat = () => {
         if (!chatWindow || !chatToggle) return;
         const isChatOpen = chatWindow.style.display === 'flex';
@@ -232,7 +232,7 @@ s   // 1. DEFINIR LA FUNCIÓN PRIMERO
         indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
         chatBody.appendChild(indicatorDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
-ar     isTyping = true;
+        isTyping = true;
         return indicatorDiv;
     };
     
@@ -243,21 +243,21 @@ ar     isTyping = true;
     };
 
     // *** NUEVA FUNCIÓN PARA LLAMAR A LA IA REAL ***
-TA   async function getRealAIResponse(userMessage) {
+    async function getRealAIResponse(userMessage) {
         if (YOUR_WEB_APP_URL === 'PEGA_AQUÍ_LA_URL_DE_IMPLEMENTACIÓN') {
             return "Error: La URL del Web App de Google no ha sido configurada en script.js.";
         }
         
         try {
             const response = await fetch(YOUR_WEB_APP_URL, {
-á             method: 'POST',
+                method: 'POST',
                 mode: 'cors', // Necesario para llamar a Apps Script
                 headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
                 body: JSON.stringify({ message: userMessage }) 
             });
 
             if (!response.ok) {
-Read             return "Lo siento, el especialista de IA no está disponible (Error de red).";
+                return "Lo siento, el especialista de IA no está disponible (Error de red).";
             }
 
             const data = await response.json();
@@ -272,7 +272,7 @@ Read             return "Lo siento, el especialista de IA no está disponi
     // Manejo del formulario de chat (Modificado con 'async')
     if (chatForm) {
         chatForm.addEventListener('submit', async (e) => { // <- 'async' es nuevo
-á         e.preventDefault();
+            e.preventDefault();
             const userMessage = chatInput.value.trim();
             if (userMessage === '' || isTyping) return;
 
@@ -280,14 +280,14 @@ Read             return "Lo siento, el especialista de IA no está disponi
             chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
-A           const indicator = createTypingIndicator();
+            const indicator = createTypingIndicator();
 
             // 2. Llamar a la IA real (esto es nuevo)
             const iaResponse = await getRealAIResponse(userMessage);
             
             // 3. Eliminar indicador y mostrar respuesta
-            removeTypingIndicator(indicator);
-    D       createMessage(iaResponse, false);
+trim         removeTypingIndicator(indicator);
+            createMessage(iaResponse, false);
         });
     }
 
