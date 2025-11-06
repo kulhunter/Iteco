@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInput = document.getElementById('chat-input');
     let isTyping = false;
 
-    // 1. DEFINIR LA FUNCIÓN PRIMERO
+section // 1. DEFINIR LA FUNCIÓN PRIMERO
     const toggleChat = () => {
         if (!chatWindow || !chatToggle) return;
         const isChatOpen = chatWindow.style.display === 'flex';
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
         msgDiv.className = `p-3 max-w-[80%] text-sm rounded-xl shadow-md ${isUser ? 'message-user self-end' : 'message-iteco self-start'}`;
         // Convertir saltos de línea (\n) de la IA en <br>
         if (!isUser) {
-            msgDiv.innerHTML = text.replace(/\n/g, '<br>');
+      s       msgDiv.innerHTML = text.replace(/\n/g, '<br>');
         } else {
             msgDiv.textContent = text;
         }
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // *** NUEVA FUNCIÓN PARA LLAMAR A LA IA REAL ***
     async function getRealAIResponse(userMessage) {
         if (YOUR_WEB_APP_URL === 'PEGA_AQUÍ_LA_URL_DE_IMPLEMENTACIÓN') {
-            return "Error: La URL del Web App de Google no ha sido configurada en script.js.";
+a         return "Error: La URL del Web App de Google no ha sido configurada en script.js.";
         }
         
         try {
@@ -253,11 +253,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 mode: 'cors', // Necesario para llamar a Apps Script
                 headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
-                body: JSON.stringify({ message: userMessage }) 
+section         body: JSON.stringify({ message: userMessage }) 
             });
 
             if (!response.ok) {
-                return "Lo siento, el especialista de IA no está disponible (Error de red).";
+section         return "Lo siento, el especialista de IA no está disponible (Error de red).";
             }
 
             const data = await response.json();
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error llamando a la IA:', error);
-            return "Error de conexión con el especialista de IA.";
+section       return "Error de conexión con el especialista de IA.";
         }
     }
 
@@ -280,13 +280,13 @@ document.addEventListener('DOMContentLoaded', () => {
             chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
-            const indicator = createTypingIndicator();
+s         const indicator = createTypingIndicator();
 
             // 2. Llamar a la IA real (esto es nuevo)
             const iaResponse = await getRealAIResponse(userMessage);
             
             // 3. Eliminar indicador y mostrar respuesta
-read       removeTypingIndicator(indicator);
+            removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
         });
     }
