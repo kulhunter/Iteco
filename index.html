@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITECO Ingeniería LTDA. | Expertos en Servidores Administrados, SAP B1 y Softland Cloud en Chile</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de la fuente Inter y personalización de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'iteco-blue': '#003366', // Azul oscuro profesional (Base)
+                        'iteco-light': '#1e90ff', // Azul vibrante para acentos (CTA/Highlights)
+                        'iteco-gray': '#F4F7F9', // Gris claro de fondo
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para el gradiente del Hero */
+        .hero-bg {
+            background: linear-gradient(135deg, #003366 0%, #005a8d 100%);
+        }
+        /* Estilo para los iconos de la promesa */
+        .icon-promesa {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-iteco-gray">
+
+    <!-- Navegación (Sticky y Responsiva) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <div class="text-2xl font-extrabold text-iteco-blue">
+                ITECO Ingeniería <span class="text-iteco-light text-sm hidden sm:inline">LTDA.</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#servicios" class="hover:text-iteco-light transition duration-300">Servicios</a>
+                <a href="#partners" class="hover:text-iteco-light transition duration-300">Partners ERP</a>
+                <a href="#experiencia" class="hover:text-iteco-light transition duration-300">Experiencia</a>
+                <a href="#contacto" class="hover:text-iteco-light transition duration-300">Contacto</a>
+            </div>
+            <a href="#contacto" class="hidden md:block bg-iteco-light text-white px-4 py-2 rounded-xl shadow-lg hover:bg-iteco-blue transition duration-300 font-semibold">
+                Solicitar Cotización
+            </a>
+            <button id="menu-button" class="md:hidden text-iteco-blue focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-4 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-100">
+                <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Servicios</a>
+                <a href="#partners" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Partners ERP</a>
+                <a href="#experiencia" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Experiencia</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-iteco-blue">Contacto</a>
+                <a href="#contacto" class="block w-full text-center bg-iteco-blue text-white mt-2 px-3 py-2 rounded-lg font-semibold">
+                    Solicitar Cotización
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección HERO (Fuerte KW y Valor) -->
+        <section class="hero-bg py-20 sm:py-32 text-white shadow-2xl">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                    <span class="block">Servidores Administrados y Soluciones Cloud ERP</span>
+                    <span class="block text-xl sm:text-2xl font-light mt-2 text-gray-200">
+                        Infraestructura Crítica con la Máxima Experiencia, Seguridad y Respaldo.
+                    </span>
+                </h1>
+                <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+                    ITECO es su socio tecnológico en Chile para la implementación y gestión de SAP Business One y Softland en entornos de Alto Rendimiento.
+                </p>
+                <a href="#servicios" class="inline-block bg-iteco-light text-white px-8 py-3 rounded-xl font-bold text-lg shadow-2xl hover:bg-white hover:text-iteco-blue transition duration-300 transform hover:scale-105">
+                    Ver Soluciones Clave
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de EXPERIENCIA (Nuestros Pilares de Valor) -->
+        <section id="experiencia" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-iteco-blue">¿Por qué Elegir ITECO? Tres Pilares de Confianza</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Pilar 1: Experiencia -->
+                    <div class="p-6 rounded-xl border border-gray-200 text-center shadow-md">
+                        <div class="icon-promesa text-iteco-light mx-auto">
+                            <!-- Icono de Experiencia/Conocimiento -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 16v.01M5 21h14a2 2 0 002-2v-3.477a10 10 0 00-2.684-1.954 2 2 0 01-1.292-.93c-.636-1.206-1.393-2.5-2.613-3.768C12.38 5.768 11.173 4.5 9.777 4.5c-1.428 0-2.822 1.258-3.777 2.223A4 4 0 003.5 9v1.5c0 1.547 1.042 2.766 2.5 2.766a4 4 0 003.856-2.583L12 11l.644 1.768a4 4 0 003.856 2.583c1.458 0 2.5-1.219 2.5-2.766V9.5c0-1.547-1.042-2.766-2.5-2.766A4 4 0 0014 4.5c-1.428 0-2.822 1.258-3.777 2.223"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">15+ Años de Experiencia</h3>
+                        <p class="text-gray-600">Conocimiento profundo en implementación, migración y mantenimiento de sistemas críticos B2B en Chile.</p>
+                    </div>
+
+                    <!-- Pilar 2: Seguridad -->
+                    <div class="p-6 rounded-xl border border-gray-200 text-center shadow-md">
+                        <div class="icon-promesa text-iteco-light mx-auto">
+                            <!-- Icono de Candado/Seguridad -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Ciberseguridad Garantizada</h3>
+                        <p class="text-gray-600">Defensa avanzada de perímetro, gestión de vulnerabilidades y protección de datos sensibles en la nube.</p>
+                    </div>
+
+                    <!-- Pilar 3: Respaldo -->
+                    <div class="p-6 rounded-xl border border-gray-200 text-center shadow-md">
+                        <div class="icon-promesa text-iteco-light mx-auto">
+                            <!-- Icono de Respaldo/Continuidad -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.995 8.995 0 0120 12a9 9 0 11-12.729-6.388M4 12V4h1M20 12h1M4 12H3"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-iteco-blue">Respaldo y Continuidad 24/7</h3>
+                        <p class="text-gray-600">Planes de Recuperación ante Desastres (DRP) y monitoreo constante para asegurar la continuidad operativa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de SERVICIOS DETALLADOS -->
+        <section id="servicios" class="py-16 sm:py-24 bg-iteco-gray">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-iteco-blue">Nuestras Soluciones Tecnológicas</h2>
+                <div class="space-y-12">
+                    <!-- Servicio 1: Servidores Administrados -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <div class="md:w-1/2 p-8 sm:p-10">
+                            <h3 class="text-2xl font-bold mb-3 text-iteco-light">Servidores Administrados y Hosting de Aplicaciones</h3>
+                            <p class="text-gray-600 mb-4">
+                                Olvídese del hardware y el mantenimiento. Nos encargamos de la **instalación, configuración, seguridad y continuidad** de sus plataformas críticas. Incluye soporte técnico ilimitado.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Monitoreo Proactivo 24/7.</li>
+                                <li>Administración de Base de Datos (SQL Server, MySQL).</li>
+                                <li>Parches de Seguridad y Firewall Gestionado.</li>
+                                <li>Garantía de Alto Rendimiento (SLA).</li>
+                            </ul>
+                            <a href="#contacto" class="mt-6 inline-block text-iteco-blue font-semibold border-b-2 border-iteco-blue hover:text-iteco-light transition duration-300">
+                                Cotizar Servicio de Administración →
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 bg-iteco-blue/10 flex items-center justify-center p-8">
+                            <!-- Placeholder visual para Servidores Administrados -->
+                            <svg class="w-24 h-24 text-iteco-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12h14M5 12a2 2 0 01-2 2v3a2 2 0 012 2h14a2 2 0 012-2v-3a2 2 0 01-2-2"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Soluciones ERP (SAP B1 y Softland) -->
+                    <div class="flex flex-col md:flex-row-reverse bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <div class="md:w-1/2 p-8 sm:p-10">
+                            <h3 class="text-2xl font-bold mb-3 text-iteco-light">Implementación y Hosting Cloud ERP</h3>
+                            <p class="text-gray-600 mb-4">
+                                Como partner especializado, ofrecemos la implementación, migración y hosting seguro de SAP Business One y Softland en la Nube.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Implementación a la medida del negocio.</li>
+                                <li>Servidores Cloud optimizados para ERP.</li>
+                                <li>Actualizaciones de software sin interrupciones.</li>
+                                <li>Soporte y consultoría funcional avanzada.</li>
+                            </ul>
+                            <a href="#partners" class="mt-6 inline-block text-iteco-blue font-semibold border-b-2 border-iteco-blue hover:text-iteco-light transition duration-300">
+                                Conocer Plataformas Soportadas →
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 bg-iteco-blue/10 flex items-center justify-center p-8">
+                            <!-- Placeholder visual para Cloud ERP -->
+                            <svg class="w-24 h-24 text-iteco-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Partners ERP -->
+        <section id="partners" class="py-16 sm:py-20 bg-iteco-blue text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Partners y Plataformas Clave</h2>
+                <p class="text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Nuestra experiencia se centra en las plataformas líderes del mercado para garantizar la eficiencia de su gestión empresarial.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+                    <!-- Placeholder SAP Business One -->
+                    <div class="bg-white text-iteco-blue font-extrabold text-2xl px-6 py-3 rounded-lg shadow-xl">
+                        SAP Business One
+                    </div>
+                    <!-- Placeholder Softland -->
+                    <div class="bg-white text-iteco-blue font-extrabold text-2xl px-6 py-3 rounded-lg shadow-xl">
+                        Softland ERP
+                    </div>
+                    <!-- Placeholder Microsoft -->
+                    <div class="bg-white text-iteco-blue font-extrabold text-2xl px-6 py-3 rounded-lg shadow-xl">
+                        Microsoft
+                    </div>
+                </div>
+                <a href="#contacto" class="mt-12 inline-block bg-iteco-light text-white px-6 py-3 rounded-xl font-bold shadow-xl hover:bg-white hover:text-iteco-blue transition duration-300">
+                    Contáctenos para una Solución Específica
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto/Formulario -->
+        <section id="contacto" class="py-16 sm:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-2xl">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-iteco-blue">Hablemos de su Infraestructura Crítica</h2>
+                    <p class="text-center text-gray-600 mb-8">
+                        Solicite una consultoría técnica sin costo. Un especialista de ITECO le contactará a la brevedad.
+                    </p>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light transition duration-150" placeholder="Su Nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico Corporativo</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light transition duration-150" placeholder="ejemplo@suempresa.cl">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Interés Principal</label>
+                            <select id="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light transition duration-150">
+                                <option value="">Seleccione un servicio...</option>
+                                <option value="servidores-administrados">Servidores Administrados (Soporte 24/7)</option>
+                                <option value="cloud-erp">Hosting y Migración Cloud ERP (SAP B1 / Softland)</option>
+                                <option value="seguridad">Auditoría de Ciberseguridad y Respaldo</option>
+                                <option value="licencias">Venta de Licencias de Software</option>
+                                <option value="otro">Otro / Consultoría General</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Comentarios</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-iteco-light focus:border-iteco-light transition duration-150" placeholder="Describa brevemente su requerimiento..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-iteco-light text-white px-6 py-3 rounded-xl font-bold text-lg shadow-xl hover:bg-iteco-blue transition duration-300 transform hover:-translate-y-0.5">
+                            Enviar Solicitud de Contacto
+                        </button>
+                    </form>
+                    
+                    <!-- Contenedor para mensajes de estado -->
+                    <div id="status-message" class="mt-4 p-4 rounded-lg hidden text-center font-semibold"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+            <!-- Columna 1: Contacto -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-iteco-light">Contáctenos</h4>
+                <p class="text-sm text-gray-400">Teléfono: +56 2 9999 9999</p>
+                <p class="text-sm text-gray-400">Email: info@itecoingenieria.com</p>
+                <p class="text-sm text-gray-400 mt-2">Ubicación: Santiago, Chile</p>
+            </div>
+            <!-- Columna 2: Soluciones -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-iteco-light">Soluciones</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servidores Administrados</a></li>
+                    <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Hosting Cloud ERP</a></li>
+                    <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Ciberseguridad</a></li>
+                    <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Licencias de Software</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3: Información -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-iteco-light">Información Legal</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Aviso Legal</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Política de Privacidad</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Términos del Servicio</a></li>
+                </ul>
+            </div>
+            <!-- Columna 4: Síguenos -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-iteco-light">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <!-- Icono Placeholder Red Social 1 (LinkedIn) -->
+                    <a href="#" class="text-gray-400 hover:text-iteco-light transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764s1.75.79 1.75 1.764c0 .974-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.765 7 2.457v6.778z"></path></svg>
+                    </a>
+                    <!-- Icono Placeholder Red Social 2 (Facebook) -->
+                    <a href="#" class="text-gray-400 hover:text-iteco-light transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.811c-3.235 0-4.189 2.597-4.189 4.381v2.619z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>ITECO Ingeniería LTDA. | Especialistas en Infraestructura IT en Chile.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el Menú Móvil y el Formulario -->
+    <script>
+        // Lógica del Menú Móvil
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica del Formulario de Contacto
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const statusMessage = document.getElementById('status-message');
+            
+            // Simulación de envío de datos (en un entorno real, aquí iría la llamada a la API)
+            console.log('Formulario de Cotización enviado:', {
+                name: form.elements['name'].value,
+                email: form.elements['email'].value,
+                service: form.elements['service'].value,
+                message: form.elements['message'].value
+            });
+
+            // Mostrar mensaje de éxito (reemplazando alert())
+            statusMessage.textContent = '¡Mensaje Enviado! Un experto de ITECO le contactará a su correo corporativo.';
+            statusMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            statusMessage.classList.add('bg-green-100', 'text-green-700');
+            
+            // Limpiar formulario
+            form.reset();
+
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+                statusMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
