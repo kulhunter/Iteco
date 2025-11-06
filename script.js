@@ -2,7 +2,7 @@
 // Lógica ITECO Ingeniería - Archivo script.js
 // 1. Navegación Móvil
 // 2. Calculadora / Configurador de Servidores
-// 3. Chatbot IA (Simulado)
+// 3. Chatbot IA (Simulado y Corregido)
 // -------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -109,7 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const input = stepElement.querySelector('input[name]:checked');
                 
                 if (!input) {
-                    alert('Por favor, selecciona una opción para continuar.');
+                    // Aunque está deshabilitado, es una capa de seguridad
+                    console.error('Por favor, selecciona una opción para continuar.');
                     return;
                 }
                 
@@ -144,8 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let summaryHTML = '';
 
         if (platform && users) {
-            basePrice = basePrices[platform][users] || 0;
-            const extraCost = backupCost[backup] || 0;
+            // Manejar posibles valores nulos o no definidos
+            const platformKey = platform in basePrices ? platform : 'Linux'; 
+            const userKey = users in basePrices[platformKey] ? users : 'small'; 
+
+            basePrice = basePrices[platformKey][userKey] || 0;
+            const extraCost = backup in backupCost ? backupCost[backup] : 0;
             finalPrice = basePrice + extraCost;
 
             // Generar Resumen
@@ -189,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================================================================
-    // 3. Lógica del Chatbot IA (Simulado)
+    // 3. Lógica del Chatbot IA (Simulado y Corregido)
     // =========================================================================
 
     const chatToggle = document.getElementById('chat-toggle');
@@ -197,7 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBody = document.getElementById('chat-body');
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
+    let isTyping = false; // Estado para evitar spam de mensajes
 
+    // La función que estaba dando error, ahora declarada globalmente (window.)
     window.toggleChat = () => {
         chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
         if (chatWindow.style.display === 'flex') {
@@ -212,6 +219,27 @@ document.addEventListener('DOMContentLoaded', () => {
         msgDiv.textContent = text;
         chatBody.appendChild(msgDiv);
         chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
+        return msgDiv; // Retornar el elemento creado
+    };
+    
+    // Función para crear el indicador de 'Escribiendo...'
+    const createTypingIndicator = () => {
+        const indicatorDiv = document.createElement('div');
+        indicatorDiv.id = 'typing-indicator';
+        indicatorDiv.className = 'message-iteco p-3 max-w-[80%] text-sm rounded-xl shadow-md self-start';
+        indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
+        chatBody.appendChild(indicatorDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+        isTyping = true;
+        return indicatorDiv;
+    };
+    
+    // Función para eliminar el indicador de 'Escribiendo...'
+    const removeTypingIndicator = (indicator) => {
+        if (indicator) {
+            indicator.remove();
+        }
+        isTyping = false;
     };
 
     // Simulación de respuesta de IA basada en keywords
@@ -225,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return "Somos especialistas en Cloud ERP, incluyendo Softland y SAP B1. Podemos hostear tu plataforma y ofrecer consultoría. ¿Cuál es el ERP que usas actualmente?";
         }
         if (msg.includes('precio') || msg.includes('costo') || msg.includes('cotizar')) {
-            return "Para darte un precio exacto, usa nuestro Configurador de Servidores (la sección de 'Configurador' arriba). Es la forma más rápida de obtener un estimado de IaaS.";
+            return "Para darte un precio exacto, usa nuestro Configurador de Servidores (la sección de 'Configurador' arriba). Es la forma más rápida de obtener un estimado de IaaS. ¡Es un servicio gratuito!";
         }
         if (msg.includes('seguridad') || msg.includes('ransomware') || msg.includes('continuidad')) {
             return "Ofrecemos Continuidad Operativa Cloud con Antiransomware y reversión automática. Garantizamos el Respaldo de datos y cumplimiento ISO 27001. ¿Te preocupa algún riesgo específico?";
@@ -234,22 +262,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return "Puedes llenar el formulario en la sección Contacto o llamar al (569) 3452 3370. Nuestro equipo te atenderá de inmediato.";
         }
         
-        return "Gracias por tu pregunta. Como especialista de ITECO, estoy aquí para ser transparente y claro. ¿Podrías ser más específico sobre tu necesidad de infraestructura, ERP o seguridad?";
+        return "Gracias por tu pregunta. Soy tu especialista ITECO. ¿Podrías ser más específico sobre tu necesidad de infraestructura, ERP o seguridad para poder ayudarte mejor?";
     };
 
     // Manejo del formulario de chat
     chatForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const userMessage = chatInput.value.trim();
-        if (userMessage === '') return;
+        if (userMessage === '' || isTyping) return;
 
         createMessage(userMessage, true);
         chatInput.value = '';
 
-        // Simular tiempo de espera para la respuesta de la IA
+        // 1. Mostrar indicador de "Escribiendo..."
+        const indicator = createTypingIndicator();
+
+        // 2. Simular tiempo de espera para la respuesta de la IA
         setTimeout(() => {
             const iaResponse = getSimulatedIAResponse(userMessage);
+            
+            // 3. Eliminar indicador y mostrar respuesta
+            removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
-        }, 800);
+        }, 1200); // 1.2 segundos para simular la respuesta
     });
 });
