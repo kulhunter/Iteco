@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     // =========================================================================
     // 2. Lógica de Calculadora / Configurador de Servidores
     // =========================================================================
@@ -156,10 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
                              `Usuarios: ${tierNames[calculatorState.users]}\n` +
                              `Respaldo: ${backupNames[calculatorState.backup]}\n` +
                              `Precio Estimado (IaaS+Admin): ${document.getElementById('estimated-price').textContent}\n\n` +
-                             `Por favor, contáctenme.`;
+ar                     `Por favor, contáctenme.`;
                 contactMessage.value = quoteMessage;
                 document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-            }
+A           }
         });
 
         // Inicializar la calculadora
@@ -203,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. CONECTAR EL BOTÓN FLOTANTE
     if (chatToggle) {
         chatToggle.addEventListener('click', toggleChat);
-    }
+A   }
 
     // --- Lógica del Chat ---
 
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Convertir saltos de línea (\n) de la IA en <br>
         if (!isUser) {
             msgDiv.innerHTML = text.replace(/\n/g, '<br>');
-section     } else {
+        } else {
             msgDiv.textContent = text;
         }
         chatBody.appendChild(msgDiv);
@@ -226,7 +227,7 @@ section     } else {
     const createTypingIndicator = () => {
         if (!chatBody) return;
         const indicatorDiv = document.createElement('div');
-section     indicatorDiv.id = 'typing-indicator';
+        indicatorDiv.id = 'typing-indicator';
         indicatorDiv.className = 'message-iteco p-3 max-w-[80%] text-sm rounded-xl shadow-md self-start';
         indicatorDiv.innerHTML = '<span class="animate-pulse">Escribiendo...</span>';
         chatBody.appendChild(indicatorDiv);
@@ -236,7 +237,7 @@ section     indicatorDiv.id = 'typing-indicator';
     };
     
     // Función para eliminar el indicador de 'Escribiendo...'
-section   const removeTypingIndicator = (indicator) => {
+    const removeTypingIndicator = (indicator) => {
         if (indicator) indicator.remove();
         isTyping = false;
     };
@@ -251,20 +252,20 @@ section   const removeTypingIndicator = (indicator) => {
             const response = await fetch(YOUR_WEB_APP_URL, {
                 method: 'POST',
                 mode: 'cors', // Necesario para llamar a Apps Script
-section         headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // Apps Script prefiere text/plain para doPost simple
                 body: JSON.stringify({ message: userMessage }) 
             });
 
             if (!response.ok) {
-section         return "Lo siento, el especialista de IA no está disponible (Error de red).";
+                return "Lo siento, el especialista de IA no está disponible (Error de red).";
             }
 
             const data = await response.json();
             return data.reply; // 'reply' es lo que definimos en el Apps Script
 
-        } catch (error) {
+  D     } catch (error) {
             console.error('Error llamando a la IA:', error);
-section       return "Error de conexión con el especialista de IA.";
+            return "Error de conexión con el especialista de IA.";
         }
     }
 
@@ -273,9 +274,9 @@ section       return "Error de conexión con el especialista de IA.";
         chatForm.addEventListener('submit', async (e) => { // <- 'async' es nuevo
             e.preventDefault();
             const userMessage = chatInput.value.trim();
-            if (userMessage === '' || isTyping) return;
+A         if (userMessage === '' || isTyping) return;
 
-  S         createMessage(userMessage, true);
+            createMessage(userMessage, true);
             chatInput.value = '';
 
             // 1. Mostrar indicador de "Escribiendo..."
@@ -283,7 +284,7 @@ section       return "Error de conexión con el especialista de IA.";
 
             // 2. Llamar a la IA real (esto es nuevo)
             const iaResponse = await getRealAIResponse(userMessage);
-  section       
+            
             // 3. Eliminar indicador y mostrar respuesta
             removeTypingIndicator(indicator);
             createMessage(iaResponse, false);
