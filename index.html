@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITECO Ingeniería | Servidores Administrados Chile, Cloud ERP, Soporte Softland y SAP B1</title>
+    <title>ITECO Ingeniería - Servidores Administrados y Cloud ERP en Chile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Referencia a nuestro CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8g350hN+RBC+NzAhaRABU8gJ4k/zX6Y1C2jBTOtSjP4p5fV/5Q3qD9Z5/j5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SEO & GEO Optimization -->
+    <meta name="description" content="ITECO Ingeniería: Servidores Administrados, Cloud ERP Chile, Continuidad Operativa y Seguridad para PYMES. Reduzca riesgos y costos con soluciones en la Nube Privada.">
+    <meta name="keywords" content="Servidores Administrados Chile, Cloud ERP Chile, Módulos ERP para PYMES, Continuidad Operativa Cloud, Servidores en Chile, Outsourcing de sistemas, Auditoria de sistemas, Nube privada, Plataformas ERP Softland, Plataformas ERP SAP B1">
     
-    <!-- SEO & AEO (Optimización de Motores de Búsqueda y Asistentes) -->
-    <meta name="description" content="ITECO Ingeniería: Expertos en Servidores Administrados en Chile, Cloud ERP Integrado, Continuidad Operativa Cloud, Antiransomware y Soporte Local para Softland y SAP B1. Reduce el riesgo de falla en tus sistemas críticos.">
-    <meta name="keywords" content="Servidores Administrados Chile, Cloud ERP Chile, Continuidad Operativa Cloud, Hosting de Aplicaciones Críticas, Respaldo de datos, Plataforma administrativa, Servidores dedicados, Soluciones ERP, Soporte ERP, Oficina Remota, Business Intelligence BI, Integración ERP Commerce, Servidores para ERP Softland, Servidores para ERP Sap B1, Soporte Local, Servidores en Chile, Servidores autogestionados, Outsorcing de sistemas, Auditoria de sistemas, Servicio de soporte, Infraestructura administrada, Nube privada, Plataformas ERP Softland, Plataformas ERP SAP B1, On-Premise Cloud, Cloud ERP Integrado, Servicios IaaS PaaS, Antiransomware con reversión automática, Cumplimiento Normativo ISO 27001, Reducir riesgo de falla sistemas, Configurador de servidores online, Servidores de bases de datos Linux/Windows">
-    <link rel="canonical" href="https://www.itecoingenieria.cl"> <!-- Asumiendo .cl -->
-    
-    <!-- Schema.org JSON-LD para SEO Local (GEO) y AEO -->
+    <!-- JSON-LD para SEO Local -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "ITECO Ingeniería",
-      "description": "Servidores Administrados Chile, Cloud ERP Integrado, y Continuidad Operativa Cloud para PYMES.",
-      "url": "https://www.itecoingenieria.cl",
-      "logo": "https://1556a248e1.clvaw-cdnwnd.com/3241ba23f27350427a6737bb4083c751/200000123-e842de8431/logo%20iteco%20OK.webp?ph=1556a248e1",
-      "telephone": "+56225067200",
+      "name": "ITECO INGENIERIA LTDA.",
+      "image": "data:image/webp;base64,UklGRqYDAABXRUJQVlA4IKIBAACQCgCdASoAAIAAAAASJYgCpQAE4BcD+B+2B9hJ/H/7//xH0//nE/81z7//+Vf7//mU+L/n+9J//B/b/8d43/v/67f/N7/d/////957j/6f/B/8P4Wf9z/u/4L/m/wJ8r/v/9b6b///4v+q///8P52f+n/jP8B+X/zH8S/lX7P//X8u/yX+y/6r/Zf4T////f3Q/0H/xP5x/zf//8t/pP/1+1f///7X+w/2r/J/5P/H///lX+n/7f/P////v0R+W/4f+j////3/91+Ff7P/k/7P/3v///9j+9X+r/2f/B/+/91//j/kP+1/4X/J/93/qf///xL8i/p3/u/+F/wf/B////5/gP8V/wf/D////7/g/5b/c/7n/S///5Z/wP9n/9/+j////r/92/vP+H/9P/M///5f/R//F/4f/9/xH+g//L/7v/p//L/53/b/1X/y/+/+N//f9y//n/93///8r/xP9V///+G/6z/i/9T/yf/B/9j//f/R/4T+o/+f///9u+M/0X/j/4n/3v/l/7B/lH/m/93/9/4Q///+l/zf+V/4v/b/8n///93/2P/u//3///zP+q/5T/2/+//9L/vf/W/3sAAAP774kXW53s5e/092p+84V/gAAAC04K35lP10/gAAAABiK20473sAAAAA3s77j8J/yvRz4AAAAALy0w7bS892wB5wAFAAAAAAAAAAABJ0r9AAAAADe5lP2lT8L53T/oP8Gf3H+0/95/43/o/9f/pP+c/+5/pP8D/yAAAAABv9P/uf+L/gH8P+1f3T/Uf+f/3v+G/o3+g/4X/Y/83/k///4Q+6f7n/Tf7D/d/4//w/9V///+F/vP/Z/8//qf+f//P/T/7v/e/6X+8/+/+d/w3+6/0n/Q/9P/T/7n/S/9T/v/2b/Y/4f/k///wL+9f4b/qP+b/n//V/4f+j/6n/d/9b/y//f/6X/f/3D/9/0n/1//E/+H/2f/D/4H/m/8L/if9V///+G/vP/m/7P/y///4U+5f+5/1P+3/uP/l/9b/pP+f/hP/N/5P/f/u3/x/+V/2//h/93/q//3/uf/H/zP+e/2v+r/7v//78K/n391/z/9z/5v//+Y/3/9J/0//d/3v/r/9j/xP/S/8v/tf+3/8X/u//X/uf/v/+/+e/tH+9/7v/x/+f/zP/T/7n/e/5f/f/8X/x/+V/2//h/93/q//3/uf/H/zP+e/2v+r/7v//78K/n391/z/9z/5v//+Y/3/9J/0//d/3v/r/9j/xP/S/8v/tf+3/8X/u//X/uf/v/+/+e/tH+9/7v/x/+f/zP+k/9n/xP+n//L+p/xT/f/13/k/9X/x/+f/zf+S/v//v/+//tf+7/zP/X/8v/sH+q/4P/D/83/g/8j/v//3/9b/vP+f/qP+F/1X/y/+D/oP/1f/v/+T/3P/b/9X/uf/j/zP+f/2f/c/8j/tf+r/7f/g/9X/w/+F/wP/p/5n/r//X/9v/e/7f/h/8D/iP9F/yP+R/5P/Uf/j/4n/p//L/7//k/9z/2//V/3v/N/73/m//P/7v/i/+H/83/h//b/m/+j/5f/i/9z/l/+L/0v/s/9n/9//t/7j/7P/g/+j/0v/r/9r/y/+n/7f/y/++AAAAAD2J+dE+46+kEIAACqY11hD5F+oT0QAAgAAAAAAAAE+dFq9AAd+k8d3gMvj0/lP9m/2v+7/3n/r//B/33/D/0v/t/8n/r/9n/rf/n/97/xf/b/6X/Y/7P/V/8f/z/9T/kP+1/4X/J/93/qf///xL8i/p3/u/+F/wf/B////5/gP8V/wf/D////7/g/5b/c/7n/S///5Z/wP9n/9/+j////r/92/vP+H/9P/M///5f/R//F/4f/9/xH+g//L/7v/p//L/53/b/1X/y/+/+N//f9y//n/93///8r/xP9V///+G/6z/i/9T/yf/B/9j//f/R/4T+o/+f///9u+M/0X/j/4n/3v/l/7B/lH/m/93/9/4Q///+l/zf+V/4v/b/8n///93/2P/u//3///zP+q/5T/2/+//9L/vf/W/3AAAIl1C26d24gGzB0Lw3/l795bQAAAGJd6c9H5x2+k0o8P5Qf/d5V/X65gXwAAXoHw8q2J/v/w/q9yX9T1t9XWj49tQd+b5K9R/+77p7W0823x9T8fD0d7Q2t4+T4/n/R6/z5/f29P5/r58/T29f5fT+f6+fb29/d48fT25/f64fL67/n/T6/z5/f277rQG0H29P9x1tXW05z00yAABR+tP7Ym5L7tXq4852f/47m/V2J0w/i368/j4AAAAAB4kAAAD5A2p//j4AAAAAAABu/9sAAAAAAA=";
+      "url": "https://www.itecoingenieria.com/",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Vicuña Mackenna 4620",
-        "addressLocality": "Macul",
-        "addressRegion": "Santiago",
+        "streetAddress": "Las Bellotas 199, Oficina 208",
+        "addressLocality": "Providencia",
+        "addressRegion": "Santiago Metropolitan Region",
         "addressCountry": "CL"
       },
       "geo": {
@@ -32,941 +35,494 @@
         "latitude": -33.4735397,
         "longitude": -70.589839
       },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "knowsAbout": ["Servidores Administrados Chile", "Cloud ERP Chile", "Soporte ERP Softland", "Soporte SAP B1", "Continuidad Operativa Cloud"]
+      "telephone": "(569) 3452 3370",
+      "slogan": "El cerebro detrás de tu infraestructura",
+      "knowsAbout": [
+        "Servidores Administrados",
+        "Cloud ERP Softland",
+        "Cloud ERP SAP Business One",
+        "Continuidad Operativa",
+        "Antiransomware con reversión automática",
+        "Outsourcing de sistemas"
+      ]
     }
     </script>
-    
-    <!-- Carga de Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carga de FontAwesome para Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'iteco-blue': '#003366', /* Azul Principal (Texto oscuro, fondos) */
-                        'iteco-cyan': '#009fe3', /* Cyan Acento (Botones, links, íconos) */
-                        'iteco-dark': '#1e293b', /* Fondo Oscuro (Contraste) */
-                        'iteco-light': '#f8fafc', /* Fondo Claro (Principal) */
-                        'text-dark': '#0f172a', /* Texto Principal (Casi negro) */
-                        'text-light': '#64748b', /* Texto Secundario (Gris) */
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        /* Estilos personalizados y UX/CX */
-        html { font-family: 'Inter', sans-serif; }
-        
-        /* Contraste Alto: Texto oscuro sobre fondo claro */
-        body { background-color: #f8fafc; color: #0f172a; }
-        .dark-section { background-color: #1e293b; color: #f8fafc; }
-        .dark-section h2, .dark-section h3 { color: #ffffff; }
-        .dark-section p { color: #cbd5e1; } /* Texto claro pero no blanco puro */
-
-        /* Corrección de Contraste: Texto celeste SÓLO como acento, NUNCA para párrafos */
-        .text-accent { color: #009fe3; }
-        
-        /* Botón Primario (Alto Contraste y Feedback) */
-        .btn-primary {
-            background-color: #009fe3; 
-            color: #ffffff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem; 
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 159, 227, 0.3), 0 2px 4px -2px rgba(0, 159, 227, 0.3);
-        }
-        .btn-primary:hover {
-            background-color: #007bb7; /* Cyan más oscuro */
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 159, 227, 0.3), 0 4px 6px -4px rgba(0, 159, 227, 0.3);
-        }
-        
-        /* Botón Secundario */
-        .btn-secondary {
-            background-color: #ffffff; 
-            color: #009fe3;
-            border: 1px solid #009fe3;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem; 
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #f8fafc;
-            transform: translateY(-2px);
-        }
-        
-        /* Animaciones de Scroll (UX Dinámico) */
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .reveal-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* ------------------ Chatbot Flotante (CX) ------------------ */
-        #chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            animation: pulse-cyan 2.5s infinite;
-        }
-        @keyframes pulse-cyan {
-            0% { box-shadow: 0 0 0 0 rgba(0, 159, 227, 0.7); }
-            70% { box-shadow: 0 0 0 12px rgba(0, 159, 227, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 159, 227, 0); }
-        }
-        #chat-window {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 90vw;
-            max-width: 400px;
-            height: 75vh;
-            max-height: 600px;
-            z-index: 999;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            border-radius: 1rem;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            overflow: hidden;
-            transform: scale(0.95);
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            visibility: hidden;
-        }
-        #chat-window.is-visible {
-            transform: scale(1);
-            opacity: 1;
-            visibility: visible;
-        }
-        /* ... (Resto de estilos del chat) ... */
-
-        /* ------------------ Calculadora "Increíble" (Wizard) ------------------ */
-        .wizard-step {
-            display: none; /* Ocultos por defecto */
-        }
-        .wizard-step.active {
-            display: block; /* Mostrar paso activo */
-        }
-        .wizard-radio-card {
-            border: 2px solid #374151; /* Borde oscuro */
-            transition: all 0.3s ease;
-        }
-        .wizard-radio-card:hover {
-            border-color: #009fe3;
-            background-color: #003366;
-        }
-        .wizard-radio-card.selected {
-            border-color: #009fe3;
-            background-color: #003366;
-            box-shadow: 0 0 15px rgba(0, 159, 227, 0.6);
-        }
-        /* Barra de Progreso */
-        #wizard-progress-bar {
-            transition: width 0.5s ease;
-        }
-    </style>
 </head>
-<body class="font-sans antialiased">
+<body class="bg-white">
 
-    <!-- Navegación (Mobile-First) -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <!-- Logo ITECO -->
-            <a href="#home" class="flex-shrink-0">
-                <img src="https://1556a248e1.clvaw-cdnwnd.com/3241ba23f27350427a6737bb4083c751/200000123-e842de8431/logo%20iteco%20OK.webp?ph=1556a248e1" 
-                     alt="Logo ITECO Ingeniería" 
-                     class="h-10 w-auto"
-                     onerror="this.onerror=null; this.src='https://placehold.co/150x40/003366/ffffff?text=ITECO+Ing';"
-                >
+    <!-- BARRA DE NAVEGACIÓN (HEADER) -->
+    <header class="bg-iteco-dark sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center flex-wrap">
+            <!-- Logo ITECO (Base64) -->
+            <a href="#inicio" class="flex items-center space-x-3 text-white">
+                <img src="data:image/webp;base64,UklGRqYDAABXRUJQVlA4IKIBAACQCgCdASoAAIAAAAASJYgCpQAE4BcD+B+2B9hJ/H/7//xH0//nE/81z7//+Vf7//mU+L/n+9J//B/b/8d43/v/67f/N7/d/////957j/6f/B/8P4Wf9z/u/4L/m/wJ8r/v/9b6b///4v+q///8P52f+n/jP8B+X/zH8S/lX7P//X8u/yX+y/6r/Zf4T////f3Q/0H/xP5x/zf//8t/pP/1+1f///7X+w/2r/J/5P/H///lX+n/7f/P////v0R+W/4f+j////3/91+Ff7P/k/7P/3v///9j+9X+r/2f/B/+/91//j/kP+1/4X/J/93/qf///xL8i/p3/u/+F/wf/B////5/gP8V/wf/D////7/g/5b/c/7n/S///5Z/wP9n/9/+j////r/92/vP+H/9P/M///5f/R//F/4f/9/xH+g//L/7v/p//L/53/b/1X/y/+/+N//f9y//n/93///8r/xP9V///+G/6z/i/9T/yf/B/9j//f/R/4T+o/+f///9u+M/0X/j/4n/3v/l/7B/lH/m/93/9/4Q///+l/zf+V/4v/b/8n///93/2P/u//3///zP+q/5T/2/+//9L/vf/W/3sAAAP774kXW53s5e/092p+84V/gAAAC04K35lP10/gAAAABiK20473sAAAAA3s77j8J/yvRz4AAAAALy0w7bS892wB5wAFAAAAAAAAAAABJ0r9AAAAADe5lP2lT8L53T/oP8Gf3H+0/95/43/o/9f/pP+c/+5/pP8D/yAAAAABv9P/uf+L/gH8P+1f3T/Uf+f/3v+G/o3+g/4X/Y/83/k///4Q+6f7n/Tf7D/d/4//w/9V///+F/vP/m/7P/y///4U+5f+5/1P+3/uP/l/9b/pP+f/hP/N/5P/f/u3/x/+V/2//h/93/q//3/uf/H/zP+e/2v+r/7v//78K/n391/z/9z/5v//+Y/3/9J/0//d/3v/r/9j/xP/S/8v/tf+3/8X/u//X/uf/v/+/+e/tH+9/7v/x/+f/zP+k/9n/xP+n//L+p/xT/f/13/k/9X/x/+f/zf+S/v//v/+//tf+7/zP/X/8v/sH+q/4P/D/83/g/8j/v//3/9b/vP+f/qP+F/1X/y/+D/oP/1f/v/+T/3P/b/9X/uf/j/zP+f/2f/c/8j/tf+r/7f/g/9X/w/+F/wP/p/5n/r//X/9v/e/7f/h/8D/iP9F/yP+R/5P/Uf/j/4n/p//L/7//k/9z/2//V/3v/N/73/m//P/7v/i/+H/83/h//b/m/+j/5f/i/9z/l/+L/0v/s/9n/9//t/7j/7P/g/+j/0v/r/9r/y/+n/7f/y/++AAAAAD2J+dE+46+kEIAACqY11hD5F+oT0QAAgAAAAAAAAE+dFq9AAd+k8d3gMvj0/lP9m/2v+7/3n/r//B/33/D/0v/t/8n/r/9n/rf/n/97/xf/b/6X/Y/7P/V/8f/z/9T/kP+1/4X/J/93/qf///xL8i/p3/u/+F/wf/B////5/gP8V/wf/D////7/g/5b/c/7n/S///5Z/wP9n/9/+j////r/92/vP+H/9P/M///5f/R//F/4f/9/xH+g//L/7v/p//L/53/b/1X/y/+/+N//f9y//n/93///8r/xP9V///+G/6z/i/9T/yf/B/9j//f/R/4T+o/+f///9u+M/0X/j/4n/3v/l/7B/lH/m/93/9/4Q///+l/zf+V/4v/b/8n///93/2P/u//3///zP+q/5T/2/+//9L/vf/W/3AAAIl1C26d24gGzB0Lw3/l795bQAAAGJd6c9H5x2+k0o8P5Qf/d5V/X65gXwAAXoHw8q2J/v/w/q9yX9T1t9XWj49tQd+b5K9R/+77p7W0823x9T8fD0d7Q2t4+T4/n/R6/z5/f29P5/r58/T29f5fT+f6+fb29/d48fT25/f64fL67/n/T6/z5/f277rQG0H29P9x1tXW05z00yAABR+tP7Ym5L7tXq4852f/47m/V2J0w/i368/j4AAAAAB4kAAAD5A2p//j4AAAAAAABu/9sAAAAAAA=" 
+                     alt="Logo ITECO Ingeniería" class="h-8 md:h-10">
+                <span class="text-xl font-bold tracking-wider hidden md:block">ITECO Ingeniería</span>
             </a>
-
-            <!-- Menú de Escritorio (Oculto en móvil) -->
-            <div class="hidden lg:flex items-center space-x-6 text-base font-medium text-text-light">
-                <a href="#servicios" class="hover:text-iteco-cyan transition duration-300">Servicios</a>
-                <a href="#plataforma" class="hover:text-iteco-cyan transition duration-300">Plataforma</a>
-                <a href="#configurador" class="hover:text-iteco-cyan transition duration-300">Configurador</a>
-                <a href="#seguridad" class="hover:text-iteco-cyan transition duration-300">Seguridad</a>
-                <a href="#blog" class="hover:text-iteco-cyan transition duration-300">Blog</a>
-                <a href="#contacto" class="btn-primary py-2 px-4 text-sm shadow-none">Contacto</a>
-            </div>
-
-            <!-- Botón de Menú Móvil (Visible en móvil) -->
-            <button id="menu-button" class="lg:hidden text-iteco-blue focus:outline-none">
-                <i class="fas fa-bars fa-lg"></i>
+            
+            <!-- Botón para menú móvil (Hamburguesa) -->
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
             </button>
-        </nav>
 
-        <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="lg:hidden hidden">
-            <div class="px-4 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-100">
-                <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Servicios</a>
-                <a href="#plataforma" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Plataforma</a>
-                <a href="#configurador" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Configurador</a>
-                <a href="#seguridad" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Seguridad</a>
-                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Blog</a>
-                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-text-dark hover:bg-gray-100 hover:text-iteco-cyan">Contacto</a>
+            <!-- Menú de Navegación -->
+            <div id="nav-menu" class="hidden w-full md:flex md:items-center md:w-auto mt-4 md:mt-0">
+                <a href="#inicio" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Inicio</a>
+                <a href="#servicios" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Servicios</a>
+                <a href="#plataforma" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Plataforma</a>
+                <a href="#seguridad" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Seguridad</a>
+                <a href="#calculadora" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Configurador</a>
+                <a href="#blog" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Blog</a>
+                <a href="#contacto" class="block md:inline-block text-white hover:text-iteco-cyan px-3 py-2 rounded-md font-medium transition duration-300">Contacto</a>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <!-- SECCIÓN HERO (INICIO) -->
+    <section id="inicio" class="header-bg h-[60vh] md:h-[80vh] flex items-center justify-center">
+        <div class="header-content text-center px-4 md:px-8 max-w-4xl">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+                El <span class="text-iteco-cyan">cerebro</span> detrás de tu infraestructura.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">
+                Transformamos tu tecnología con <strong class="font-semibold">Servidores Administrados en Chile</strong>, Cloud ERP y Continuidad Operativa.
+            </p>
+            <a href="#calculadora" class="bg-iteco-cyan text-iteco-dark hover:bg-white hover:text-iteco-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                Configura tu Solución Ahora <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
 
-        <!-- Sección HERO (H1) -->
-        <section id="home" class="relative hero-bg py-24 md:py-32 text-white overflow-hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                    El Cerebro de tu Negocio: <span class="text-iteco-cyan">Cloud ERP & Servidores Administrados en Chile</span>
-                </h1>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-300">
-                    Diseñamos ecosistemas digitales donde tus sistemas no solo funcionan, se comunican. Expertos en <strong class="text-white">Continuidad Operativa Cloud</strong> y <strong class="text-white">Soporte Local para PYMES</strong>.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#configurador" class="btn-primary px-8 py-3 text-lg">
-                        <i class="fas fa-calculator mr-2"></i> Configura tu Servidor
-                    </a>
-                    <a href="#servicios" class="btn-secondary px-8 py-3 text-lg bg-white/10 text-white border-white/50 hover:bg-white hover:text-iteco-blue">
-                        Conoce nuestros Servicios
-                    </a>
+    <!-- SECCIÓN DE SERVICIOS - PUNTOS CLAVE -->
+    <section id="servicios" class="py-16 md:py-24 bg-iteco-soft">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-iteco-dark mb-4">
+                Lo que hacemos diferente
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Somos especialistas en entornos <strong class="text-iteco-primary">ERP (SAP B1, Softland)</strong>. Nuestro foco es la integración, seguridad y la <strong class="text-iteco-primary">Continuidad Operativa Cloud</strong>.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Tarjeta 1: Reducción de Riesgos -->
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-shield-alt text-5xl text-iteco-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold text-iteco-dark mb-3">Reducción de Riesgo de Falla</h3>
+                    <p class="text-gray-600">Minimizamos la exposición con soluciones <strong class="font-semibold">Antiransomware con reversión automática</strong> y cumplimiento normativo ISO 27001.</p>
+                </div>
+                <!-- Tarjeta 2: Optimización de Costos -->
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-hand-holding-usd text-5xl text-iteco-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold text-iteco-dark mb-3">Optimización de Costos (IaaS / PaaS)</h3>
+                    <p class="text-gray-600">Ofrecemos <strong class="font-semibold">alternativas a la nube genérica</strong> (AWS/Azure) con precios fijos y gestión local en Chile.</p>
+                </div>
+                <!-- Tarjeta 3: Rendimiento Garantizado -->
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-tachometer-alt text-5xl text-iteco-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold text-iteco-dark mb-3">Rendimiento y Soporte Local</h3>
+                    <p class="text-gray-600">Nuestra <strong class="font-semibold">Infraestructura Administrada</strong> en Chile garantiza baja latencia y un equipo de <strong class="font-semibold">Soporte Local</strong> experto.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Sección "Por Qué ITECO" (PPTX) - Alto Contraste -->
-        <section id="porque-iteco" class="py-16 md:py-24 bg-iteco-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">¿Por Qué ITECO?</h2>
-                    <p class="text-lg text-text-light max-w-3xl mx-auto">Nuestra filosofía se basa en 3 pilares para <strong class="text-iteco-blue">reducir el riesgo de falla de sistemas</strong>.</p>
+    <!-- SECCIÓN PLATAFORMA (SERVIDORES Y CLOUD ERP) -->
+    <section id="plataforma" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-iteco-dark mb-12">
+                Nuestra Plataforma: <span class="text-iteco-primary">Servidores Administrados Chile</span>
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Columna de Texto -->
+                <div class="lg:pr-10">
+                    <h3 class="text-2xl font-semibold text-iteco-dark mb-4">
+                        1. Hosting y Administración de Cloud ERP
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Somos expertos en <strong class="font-semibold">Plataformas ERP Softland</strong> y <strong class="font-semibold">Plataformas ERP SAP B1</strong>. Albergamos, administramos y optimizamos tu sistema crítico para que opere con la máxima velocidad y seguridad en nuestra <strong class="font-semibold">Nube Privada</strong>.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong class="font-semibold">Integración ERP Commerce:</strong> Soluciones para conectar tu ERP con el mundo digital.</li>
+                        <li><strong class="font-semibold">Módulos ERP para PYMES:</strong> Adaptación y consultoría experta.</li>
+                        <li><strong class="font-semibold">Business Intelligence (BI):</strong> Integración de herramientas para análisis de datos con tu ERP.</li>
+                    </ul>
+                    <a href="#calculadora" class="mt-6 inline-block text-iteco-primary hover:text-iteco-cyan font-semibold transition duration-300">
+                        Ver planes de ERP Cloud <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Riesgo -->
-                    <div class="text-center p-6 reveal-on-scroll" data-delay="100">
-                        <i class="fas fa-shield-alt fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-iteco-blue">Reducción de Riesgo</h3>
-                        <p class="text-text-light">Nuestros <strong class="text-text-dark">Servicios Administrados</strong> reducen el riesgo de falla y aseguran la disponibilidad de los sistemas críticos 24/7.</p>
-                    </div>
-                    <!-- Costos -->
-                    <div class="text-center p-6 reveal-on-scroll" data-delay="200">
-                        <i class="fas fa-coins fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-iteco-blue">Optimización de Costos</h3>
-                        <p class="text-text-light">Trabajamos con escalabilidad para reducir costos y ofrecer un servicio eficiente a valores asequibles. Somos la mejor <strong class="text-text-dark">alternativa a la nube genérica</strong>.</p>
-                    </div>
-                    <!-- Rendimiento -->
-                    <div class="text-center p-6 reveal-on-scroll" data-delay="300">
-                        <i class="fas fa-tachometer-alt fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-2xl font-semibold mb-2 text-iteco-blue">Máximo Rendimiento</h3>
-                        <p class="text-text-light">Experiencia y tecnología de punta garantizan la continuidad en la operación de tus <strong class="text-text-dark">Plataformas ERP Softland y SAP B1</strong>.</p>
-                    </div>
+                <!-- Columna de Imagen Placeholder -->
+                <div class="rounded-lg shadow-xl overflow-hidden min-h-64">
+                    <img src="https://images.pexels.com/photos/17489157/pexels-photo-17489157.jpeg" 
+                         onerror="this.onerror=null; this.src='https://source.unsplash.com/random/800x600/?cloud,erp'" 
+                         alt="Cloud ERP" class="w-full h-full object-cover">
                 </div>
             </div>
-        </section>
 
-        <!-- Sección "Servicios Principales" (itc-servicios) - Mobile-First (Alternando) -->
-        <section id="servicios" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Soluciones Integrales para tu Negocio</h2>
-                    <p class="text-lg text-text-light max-w-3xl mx-auto">Desde la consultoría ERP hasta la infraestructura y el soporte.</p>
-                </div>
-
-                <!-- Servicio 1: Cloud ERP (Layout Imagen + Texto) -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16 reveal-on-scroll">
-                    <div class="rounded-lg overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1556742502-0d60d5b516F7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1170&q=80" alt="Cloud ERP Integrado" class="w-full h-full object-cover" loading="lazy">
+            <!-- Separador y Contenido Secundario -->
+            <div class="mt-16 pt-12 border-t border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-iteco-dark mb-4">
+                            2. Servidores Dedicados vs. Autogestionados
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Ofrecemos <strong class="font-semibold">Servidores Dedicados</strong> con administración completa, garantizando rendimiento y seguridad. Si ya tienes control, te damos <strong class="font-semibold">Servidores autogestionados</strong> en nuestra infraestructura con el mejor rendimiento en Chile.
+                        </p>
+                        <p class="text-gray-600">
+                            Nuestros <strong class="font-semibold">Servidores para ERP Softland</strong> y <strong class="font-semibold">Servidores para ERP Sap B1</strong> están optimizados desde el hardware hasta el software.
+                        </p>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold mb-4 text-iteco-blue">1. Cloud ERP Integrado</h3>
-                        <p class="text-text-light mb-6">Nos especializamos en <strong class="text-text-dark">Soluciones ERP</strong> para PYMES. Estando en un entorno exclusivo, tus datos se sincronizan con el ERP, portales E-Commerce (Shopify, MercadoLibre) y sistemas de informes (PowerBI).</p>
-                        <ul class="space-y-3 text-text-dark">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> Expertos en <strong class="ml-1">Servidores para ERP Softland</strong>.</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> Especialistas en <strong class="ml-1">Servidores para ERP Sap B1</strong>.</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Integración ERP Commerce</strong> y BI.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Servicio 2: Infraestructura (Layout Texto + Imagen) -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16 reveal-on-scroll">
-                    <div class="lg:order-2 rounded-lg overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1590959411132-a590a5697d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1170&q=80" alt="Infraestructura Administrada" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div class="lg:order-1">
-                        <h3 class="text-3xl font-bold mb-4 text-iteco-blue">2. Infraestructura Administrada</h3>
-                        <p class="text-text-light mb-6">Especialistas en cada materia (Sistemas Operativos, Bases de Datos, ERP) se ocupan de la plataforma, garantizando su funcionamiento. El cliente se libera de las complejas tareas de administración.</p>
-                        <ul class="space-y-3 text-text-dark">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Servidores Administrados Chile</strong> (IaaS & PaaS).</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">On-Premise Cloud</strong> (Nube privada en tu oficina o nuestro DC).</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Hosting de Aplicaciones Críticas</strong> y Bases de Datos.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Servicio 3: Soporte y Outsourcing (Layout Imagen + Texto) -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center reveal-on-scroll">
-                    <div class="rounded-lg overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1556761175-59736f4c329e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1080&q=80" alt="Soporte y Outsourcing" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-4 text-iteco-blue">3. Soporte y Outsourcing</h3>
-                        <p class="text-text-light mb-6">Si requieres una mesa de ayuda (Helpdesk) o asistencia continua, en ITECO tenemos la solución. Optimizamos el trabajo de sistemas y mejoramos los niveles de servicio.</p>
-                        <ul class="space-y-3 text-text-dark">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Servicio de soporte</strong> y Mesa de Ayuda.</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Soporte ERP</strong> (Funcional y Técnico).</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-iteco-cyan mr-3"></i> <strong class="ml-1">Outsorcing de sistemas</strong> y personal TI.</li>
-                        </ul>
+                        <h3 class="text-2xl font-semibold text-iteco-dark mb-4">
+                            3. Outsourcing y Soporte de Sistemas
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Con nuestro servicio de <strong class="font-semibold">Outsourcing de sistemas</strong>, nos convertimos en tu equipo de IT. Ofrecemos asistencia continua y profesional, con foco en mejorar el nivel de servicio y optimizar procesos críticos.
+                        </p>
+                        <p class="text-gray-600">
+                            Incluye <strong class="font-semibold">Servicio de soporte</strong> continuo, <strong class="font-semibold">Soporte ERP</strong> y la implementación de soluciones de <strong class="font-semibold">Oficina Remota</strong> seguras.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Sección "Plataforma" (servidores) - Detalle Técnico -->
-        <section id="plataforma" class="py-16 md:py-24 bg-iteco-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Plataforma de Servidores en Chile</h2>
-                    <p class="text-lg text-text-light max-w-3xl mx-auto">Rendimiento, flexibilidad y <strong class="text-iteco-blue">Soporte Local</strong> para tus sistemas de misión crítica.</p>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- Card 1: Servidores Administrados -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg reveal-on-scroll">
-                        <i class="fas fa-users-cog fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-3 text-iteco-blue">Servidores Administrados</h3>
-                        <p class="text-text-light mb-4">La mejor forma de asegurar la <strong class="text-text-dark">Continuidad Operativa</strong>. ITECO se encarga de actualizaciones, mantenimiento y aseguramiento. Todos los planes incluyen licenciamiento y herramientas de seguridad.</p>
-                        <ul class="space-y-2 text-sm text-text-dark">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ideal para <strong class="ml-1">Sistemas Críticos y ERPs</strong>.</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Incluye <strong class="ml-1">Soporte DBA</strong> y monitoreo 24/7.</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> <strong class="ml-1">Respaldo de datos</strong> y seguridad gestionada.</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Card 2: Servidores Autogestionados -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg reveal-on-scroll">
-                        <i class="fas fa-user-shield fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-3 text-iteco-blue">Servidores Autogestionados</h3>
-                        <p class="text-text-light mb-4">Ideal para empresas con profesionales capacitados (DevOps/SysAdmin) o áreas de desarrollo y QA que requieren autonomía de administrador.</p>
-                        <ul class="space-y-2 text-sm text-text-dark">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Flexibilidad y crecimiento <strong class="ml-1">On-Demand</strong>.</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Asignación de recursos (Disco, CPU, Memoria).</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Perfecto para <strong class="ml-1">Entornos de Control de Calidad (QA)</strong>.</li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+    </section>
 
-                <!-- Tabla de Servidores de BD (PPTX) -->
-                <div class="mt-16 bg-white p-8 rounded-lg shadow-lg reveal-on-scroll">
-                    <h3 class="text-2xl font-bold mb-4 text-center text-iteco-blue">Servidores de Bases de Datos (Linux/Windows)</h3>
-                    <p class="text-text-light mb-6 text-center">Diseñados para rendimiento mejorado, seguridad y alta conectividad. Conecta tus apps internas o BI (Power BI, Tableau) directamente.</p>
-                    <div class="overflow-x-auto">
-                        <table class="w-full min-w-max text-left">
-                            <thead>
-                                <tr class="border-b bg-iteco-light">
-                                    <th class="p-4 font-semibold">Característica</th>
-                                    <th class="p-4 font-semibold text-center">Linux (Ubuntu/CentOS/Debian)</th>
-                                    <th class="p-4 font-semibold text-center">Windows Server</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-text-dark">
-                                <tr class="border-b"><td class="p-4">MySql / MariaDB / PostgreSql</td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i> (con WSL o nativo)</td></tr>
-                                <tr class="border-b"><td class="p-4">Microsoft SQL Server</td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i> (en Docker)</td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td></tr>
-                                <tr class="border-b"><td class="p-4">Firewall y Filtrado de Puertos</td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td></tr>
-                                <tr class="border-b"><td class="p-4">Vpn Site to Site / Vpn de Usuario</td><td class="p-4 text-center text-sm font-bold text-iteco-cyan">OPCIONAL</td><td class="p-4 text-center text-sm font-bold text-iteco-cyan">OPCIONAL</td></tr>
-                                <tr class="border-b"><td class="p-4">Disponibilidad 7x24</td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td></tr>
-                                <tr class="border-b"><td class="p-4"><strong class="text-iteco-blue">Soporte DBA (Administrado)</strong></td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td><td class="p-4 text-center"><i class="fas fa-check text-green-500"></i></td></tr>
-                                <tr><td class="p-4 font-bold text-lg text-iteco-blue">Valor (Autogestionado)</td><td class="p-4 text-center font-bold text-lg text-iteco-blue">Desde UF 2 / mes</td><td class="p-4 text-center font-bold text-lg text-iteco-blue">Desde UF 3,5 / mes</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <!-- SECCIÓN DE SEGURIDAD Y CONTINUIDAD OPERATIVA -->
+    <section id="seguridad" class="py-16 md:py-24 bg-iteco-dark text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+                Seguridad Avanzada y <span class="text-iteco-cyan">Continuidad Operativa Cloud</span>
+            </h2>
+            <p class="text-center text-lg text-gray-300 mb-12 max-w-4xl mx-auto">
+                No arriesgues tu información crítica. Nuestras soluciones garantizan la disponibilidad, el respaldo de datos y el cumplimiento de los más altos estándares.
+            </p>
+
+            <!-- Tarjetas de Características de Seguridad -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Antiransomware -->
+                <div class="bg-iteco-primary p-6 rounded-lg shadow-xl">
+                    <i class="fas fa-lock text-3xl text-iteco-cyan mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3">Antiransomware con Reversión Automática</h3>
+                    <p class="text-gray-200">Protección proactiva contra amenazas modernas. Permite revertir automáticamente los datos a un estado limpio tras un ataque, minimizando el downtime.</p>
+                </div>
+                <!-- Tarjeta 2: Respaldo y Recuperación -->
+                <div class="bg-iteco-primary p-6 rounded-lg shadow-xl">
+                    <i class="fas fa-cloud-upload-alt text-3xl text-iteco-cyan mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3">Respaldo de Datos Críticos</h3>
+                    <p class="text-gray-200">Sistema de respaldo redundante para copias completas de servidores y áreas de datos, con restauración garantizada incluso en hardware distinto (DRaaS).</p>
+                </div>
+                <!-- Tarjeta 3: Cumplimiento Normativo -->
+                <div class="bg-iteco-primary p-6 rounded-lg shadow-xl">
+                    <i class="fas fa-file-contract text-3xl text-iteco-cyan mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3">Auditoría y Cumplimiento ISO 27001</h3>
+                    <p class="text-gray-200">Realizamos <strong class="font-semibold">Auditoria de sistemas</strong> para alinear tu entorno con los objetivos del negocio y los requisitos de cumplimiento normativo (ISO 27001).</p>
                 </div>
             </div>
-        </section>
+            
+            <!-- Llamada a la Acción -->
+            <div class="text-center mt-12">
+                <a href="#contacto" class="bg-white text-iteco-dark hover:bg-iteco-cyan hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Solicitar Auditoría de Seguridad <i class="fas fa-chevron-circle-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN CALCULADORA DE SERVIDORES (CONFIGURADOR) -->
+    <section id="calculadora" class="py-16 md:py-24 bg-iteco-soft">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-iteco-dark mb-4">
+                Configurador de Servidores Online
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-10">
+                Responde 4 sencillas preguntas y obtén una cotización preliminar de <strong class="text-iteco-primary">Servidores Administrados</strong> en Chile.
+            </p>
 
-        <!-- Sección "Calculadora Increíble" (Wizard Interactivo) -->
-        <section id="configurador" class="py-16 md:py-24 dark-section">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Configurador de Servidores Online</h2>
-                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">Diseña tu <strong class="text-iteco-cyan">Nube Privada</strong> en 4 simples pasos y obtén una estimación instantánea.</p>
-                </div>
+            <div id="calculator-card" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl border-t-4 border-iteco-cyan">
                 
-                <div id="wizard-container" class="max-w-4xl mx-auto bg-iteco-dark p-6 md:p-10 rounded-xl shadow-2xl reveal-on-scroll">
-                    <!-- Barra de Progreso -->
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-6">
-                        <div id="wizard-progress-bar" class="bg-iteco-cyan h-2.5 rounded-full" style="width: 25%;"></div>
+                <!-- Barra de Progreso -->
+                <div class="mb-8">
+                    <div class="flex justify-between text-sm mb-1 text-iteco-dark font-semibold">
+                        <span>Paso <span id="current-step-display">1</span> de 4</span>
+                        <span id="step-title">Tipo de Plataforma</span>
                     </div>
-                    <form id="calculator-form">
-                        <!-- Paso 1: Propósito -->
-                        <div id="step-1" class="wizard-step active">
-                            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Paso 1: ¿Cuál es el propósito principal del servidor?</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-2">
-                                    <input type="radio" name="purpose" value="erp" class="hidden">
-                                    <i class="fas fa-server fa-3x text-iteco-cyan mb-3"></i>
-                                    <span class="block font-medium text-white">Cloud ERP (Softland / SAP B1)</span>
-                                </label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-2">
-                                    <input type="radio" name="purpose" value="web" class="hidden">
-                                    <i class="fas fa-code fa-3x text-iteco-cyan mb-3"></i>
-                                    <span class="block font-medium text-white">Apps Web / E-Commerce</span>
-                                </label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-2">
-                                    <input type="radio" name="purpose" value="produccion" class="hidden">
-                                    <i class="fas fa-industry fa-3x text-iteco-cyan mb-3"></i>
-                                    <span class="block font-medium text-white">Producción / Logística</span>
-                                </label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-2">
-                                    <input type="radio" name="purpose" value="otros" class="hidden">
-                                    <i class="fas fa-question-circle fa-3x text-iteco-cyan mb-3"></i>
-                                    <span class="block font-medium text-white">Otros / Básico / QA</span>
-                                </label>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="progress-bar" class="bg-iteco-cyan h-2.5 rounded-full transition-all duration-500" style="width: 25%;"></div>
+                    </div>
+                </div>
+
+                <!-- Pasos de la Calculadora -->
+                <form id="calculator-form">
+                    <!-- Paso 1: Tipo de Plataforma -->
+                    <div id="step-1" class="calculator-step active">
+                        <h3 class="text-2xl font-bold text-iteco-primary mb-6">Paso 1: ¿Qué tipo de plataforma requiere?</h3>
+                        <div class="space-y-4">
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="Linux">
+                                <input type="radio" name="platform" value="Linux" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">Servidor de Bases de Datos Linux</strong> (Ideal para alto rendimiento, menor costo de licencia).
+                            </label>
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="Windows">
+                                <input type="radio" name="platform" value="Windows" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">Servidor de Bases de Datos Windows</strong> (Necesario para ERPs basados en SQL Server, mayor compatibilidad).
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Usuarios / Carga -->
+                    <div id="step-2" class="calculator-step">
+                        <h3 class="text-2xl font-bold text-iteco-primary mb-6">Paso 2: ¿Cuántos usuarios simultáneos manejará el sistema?</h3>
+                        <div class="space-y-4">
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="small">
+                                <input type="radio" name="users" value="small" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">PYME Básica (Hasta 10 Usuarios)</strong> - Configuración Small.
+                            </label>
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="medium">
+                                <input type="radio" name="users" value="medium" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">PYME en Crecimiento (11 - 30 Usuarios)</strong> - Configuración Medium.
+                            </label>
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="large">
+                                <input type="radio" name="users" value="large" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">Empresa Consolidada (Más de 30 Usuarios)</strong> - Configuración Large.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Servicio de Respaldo -->
+                    <div id="step-3" class="calculator-step">
+                        <h3 class="text-2xl font-bold text-iteco-primary mb-6">Paso 3: ¿Requiere Continuidad Operativa y Respaldo de Datos?</h3>
+                        <div class="space-y-4">
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="full">
+                                <input type="radio" name="backup" value="full" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">Sí, Completo</strong> (Recomendado: Respaldo de datos con DR y Antiransomware).
+                            </label>
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="basic">
+                                <input type="radio" name="backup" value="basic" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">Básico</strong> (Solo respaldo de disco diario).
+                            </label>
+                            <label class="block p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-iteco-soft transition duration-200" data-value="none">
+                                <input type="radio" name="backup" value="none" class="mr-3 text-iteco-cyan focus:ring-iteco-cyan">
+                                <strong class="font-semibold">No</strong> (No recomendado para sistemas críticos).
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4: Resultado y Cotización -->
+                    <div id="step-4" class="calculator-step">
+                        <h3 class="text-2xl font-bold text-iteco-primary mb-6">Paso 4: Resumen y Resultado Preliminar</h3>
+                        
+                        <div class="bg-iteco-soft p-6 rounded-lg mb-6 shadow-inner">
+                            <h4 class="text-xl font-semibold text-iteco-dark mb-4 border-b pb-2 border-gray-300">Tu Configuración</h4>
+                            <div class="space-y-3 text-gray-700" id="summary-details">
+                                <!-- Detalles inyectados por JS -->
                             </div>
                         </div>
 
-                        <!-- Paso 2: Disponibilidad -->
-                        <div id="step-2" class="wizard-step">
-                            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Paso 2: ¿Qué nivel de Continuidad Operativa necesitas?</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-3"><input type="radio" name="availability" value="critico" class="hidden"><i class="fas fa-shield-alt fa-3x text-iteco-cyan mb-3"></i><span class="block font-medium text-white">Misión Crítica (HA / 24x7)</span></label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-3"><input type="radio" name="availability" value="continuo" class="hidden"><i class="fas fa-sync-alt fa-3x text-iteco-cyan mb-3"></i><span class="block font-medium text-white">Procesamiento Continuo</span></label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-3"><input type="radio" name="availability" value="jornada" class="hidden"><i class="fas fa-briefcase fa-3x text-iteco-cyan mb-3"></i><span class="block font-medium text-white">Jornada de Trabajo (8x5)</span></label>
-                                <label class="wizard-radio-card p-4 rounded-lg text-center cursor-pointer" data-next="step-3"><input type="radio" name="availability" value="nocturno" class="hidden"><i class="fas fa-moon fa-3x text-iteco-cyan mb-3"></i><span class="block font-medium text-white">Uso Nocturno / Batch</span></label>
-                            </div>
+                        <div class="text-center p-4 bg-iteco-cyan rounded-lg text-iteco-dark shadow-md">
+                            <p class="text-xl font-semibold">Costo Mensual Estimado (Configuración IaaS)</p>
+                            <span class="text-3xl font-extrabold" id="estimated-price">$0 USD</span>
                         </div>
 
-                        <!-- Paso 3: Recursos -->
-                        <div id="step-3" class="wizard-step">
-                            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Paso 3: ¿Cuántos usuarios y almacenamiento?</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <label for="prop-users" class="block text-lg font-medium text-white mb-2">Usuarios Concurrentes: <span id="users-value" class="text-iteco-cyan font-bold">10</span></label>
-                                    <input type="range" id="prop-users" min="1" max="100" value="10" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer range-thumb-cyan">
-                                </div>
-                                <div>
-                                    <label for="prop-storage" class="block text-lg font-medium text-white mb-2">Almacenamiento (SSD/NVMe): <span id="storage-value" class="text-iteco-cyan font-bold">200 GB</span></label>
-                                    <select id="prop-storage" class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-iteco-cyan focus:ring-iteco-cyan">
-                                        <option value="200">Hasta 200GB (Base PYME)</option>
-                                        <option value="500">De 200 a 500GB</option>
-                                        <option value="1000">De 500GB a 1TB</option>
-                                        <option value="2000">De 1 a 2TB</option>
-                                        <option value="4000">Más de 2TB</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-4">
+                            * Este es un valor referencial (IaaS + Administración básica). El costo final puede variar según la configuración de ERP y licencias.
+                        </p>
 
-                        <!-- Paso 4: Modalidad y Respaldo -->
-                        <div id="step-4" class="wizard-step">
-                            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Paso 4: ¿Qué modalidad y respaldo prefieres?</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-lg font-medium text-white mb-2">Modalidad de Soporte</label>
-                                    <select id="prop-management" class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-iteco-cyan focus:ring-iteco-cyan">
-                                        <option value="admin">Servidores Administrados (Recomendado)</option>
-                                        <option value="auto">Servidores Autogestionados (IaaS)</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-lg font-medium text-white mb-2">Respaldo y Antiransomware</label>
-                                    <select id="prop-backup" class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-iteco-cyan focus:ring-iteco-cyan">
-                                        <option value="diario">Respaldo Diario + Antiransomware (Recomendado)</option>
-                                        <option value="replicacion">Replicación Continua (HA)</option>
-                                        <option value="semanal">Respaldo Semanal Simple</option>
-                                        <option value="no">Sin Respaldo (Riesgo Alto)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        <button type="button" id="contact-quote-btn" class="w-full mt-6 bg-iteco-primary text-white hover:bg-iteco-dark font-bold py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                            <i class="fas fa-paper-plane mr-2"></i> Solicitar Cotización Formal
+                        </button>
+                    </div>
 
-                        <!-- Paso 5: Resultado -->
-                        <div id="step-5" class="wizard-step text-center">
-                            <h3 class="text-2xl font-semibold text-white mb-4">¡Estimación Lista!</h3>
-                            <p class="text-gray-300 mb-6">Basado en tus selecciones, esta es una estimación para tu <strong class="text-iteco-cyan">Nube Privada Administrada</strong>.</p>
-                            <div class="bg-iteco-dark p-6 rounded-xl shadow-inner">
-                                <h4 class="text-lg font-semibold text-gray-300">Estimación de Inversión Mensual</h4>
-                                <div id="estimated-price" class="text-5xl font-extrabold my-3 text-iteco-cyan transition duration-500">UF 28,5 / mes</div>
-                                <div id="recommendation-text" class="text-gray-400 mb-6">Configuración base (Administrado, Diario).</div>
-                                <p class="text-xs text-gray-500 mb-6">*Estimación de **Servicios IaaS PaaS**. No incluye IVA, licencias ni **Soporte ERP** especializado.</p>
-                                <button id="btn-cotizar-final" type="button" class="btn-primary w-full text-lg">
-                                    <i class="fas fa-paper-plane mr-2"></i> Solicitar Cotización Formal
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Navegación del Wizard -->
-                    <div class="flex justify-between mt-8">
-                        <button id="wizard-prev" class="btn-secondary bg-gray-700 text-white border-gray-700 hover:bg-gray-600" disabled>
+                    <!-- Botones de Navegación -->
+                    <div class="mt-8 flex justify-between">
+                        <button type="button" id="prev-btn" class="bg-gray-400 text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:bg-gray-500 disabled:opacity-50" disabled>
                             <i class="fas fa-arrow-left mr-2"></i> Anterior
                         </button>
-                        <button id="wizard-next" class="btn-primary" disabled>
+                        <button type="button" id="next-btn" class="bg-iteco-primary text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:bg-iteco-dark disabled:opacity-50">
                             Siguiente <i class="fas fa-arrow-right ml-2"></i>
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN BLOG -->
+    <section id="blog" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-iteco-dark mb-4">
+                Nuestro Blog: Innovación y Conocimiento
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Mantente al día con las últimas tendencias en <strong class="text-iteco-primary">Servicios e Infraestructura productiva</strong> para PYMES.
+            </p>
 
-        <!-- Sección "Seguridad" (PPTX) - Alto Contraste y legibilidad -->
-        <section id="seguridad" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Seguridad Avanzada y Continuidad Operativa</h2>
-                    <p class="text-lg text-text-light max-w-3xl mx-auto">Protegemos tu <strong class="text-iteco-blue">Respaldo de datos</strong> con tecnología de punta y <strong class="text-iteco-blue">Cumplimiento Normativo ISO 27001</strong>.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="bg-iteco-light p-6 rounded-lg shadow-md reveal-on-scroll" data-delay="100">
-                        <i class="fas fa-shield-virus fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-xl font-bold text-iteco-blue mb-2">Antiransomware con Reversión</h3>
-                        <p class="text-text-light text-sm">Detección basada en comportamiento y <strong class="text-text-dark">reversión automática</strong> del ataque, asegurando tus datos.</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-iteco-light p-6 rounded-lg shadow-md reveal-on-scroll" data-delay="200">
-                        <i class="fas fa-search-plus fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-xl font-bold text-iteco-blue mb-2">EDR y Detección de Amenazas</h3>
-                        <p class="text-text-light text-sm">Respuesta a incidentes con un clic, visualización de cadena de ataque (MITRE ATT&CK) y búsqueda inteligente de IoC.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-iteco-light p-6 rounded-lg shadow-md reveal-on-scroll" data-delay="300">
-                        <i class="fas fa-tasks fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-xl font-bold text-iteco-blue mb-2">Auditoría y Cumplimiento</h3>
-                        <p class="text-text-light text-sm">Realizamos <strong class="text-text-dark">Auditoria de sistemas</strong> para el <strong class="text-text-dark">Cumplimiento Normativo ISO 27001</strong>.</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="bg-iteco-light p-6 rounded-lg shadow-md reveal-on-scroll" data-delay="400">
-                        <i class="fas fa-database fa-3x text-iteco-cyan mb-4"></i>
-                        <h3 class="text-xl font-bold text-iteco-blue mb-2">Respaldo y Continuidad</h3>
-                        <p class="text-text-light text-sm">Plataforma de <strong class="text-text-dark">Continuidad Operativa Cloud</strong> que integra ciberseguridad y recuperación en caso de desastres.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artículo 1: Importancia de la Auditoría -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/8962449/pexels-photo-8962449.jpeg" 
+                         onerror="this.onerror=null; this.src='https://source.unsplash.com/random/400x300/?auditing,security';" 
+                         alt="Auditoría de Sistemas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-iteco-cyan">SEGURIDAD</span>
+                        <h3 class="text-xl font-bold text-iteco-dark mt-2 mb-3">La Importancia de la Auditoría de Sistemas para tu Negocio</h3>
+                        <p class="text-gray-600 text-sm">Alinea tu TI con los objetivos de negocio y detecta vulnerabilidades antes de que se conviertan en fallas críticas.</p>
+                        <a href="https://www.itecoingenieria.com/blog/" target="_blank" class="mt-4 inline-block text-iteco-primary hover:text-iteco-cyan font-semibold text-sm">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Sección "Blog" (blog) - Artículos Reales -->
-        <section id="blog" class="py-16 md:py-24 bg-iteco-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Blog ITECO: Novedades y Análisis</h2>
-                    <p class="text-lg text-text-light max-w-3xl mx-auto">Información de valor sobre tecnología, gestión y optimización de plataformas.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Artículo 1: Auditoría -->
-                    <a href="https://www.itecoingenieria.com/blog/importancia-de-auditar-los-sistemas-de-informacion-en-la-pyme/" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden reveal-on-scroll card-feature">
-                        <img src="https://images.unsplash.com/photo-1516321318423-271c06830009?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1170&q=80" alt="Auditoría de Sistemas" class="w-full h-48 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-iteco-blue mb-2">Importancia de la <strong class="text-text-dark">Auditoria de sistemas</strong> en la PYME</h3>
-                            <p class="text-sm text-text-light mb-4">Asegura el cumplimiento normativo y detecta vulnerabilidades antes de que afecten tu operación.</p>
-                            <span class="text-iteco-cyan font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></span>
-                        </div>
-                    </a>
-                    <!-- Artículo 2: ERP -->
-                    <a href="https://www.itecoingenieria.com/blog/plataformas-erp-softland-y-sap-b1-en-servidores-cloud-iteco/" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden reveal-on-scroll card-feature">
-                        <img src="https://images.unsplash.com/photo-1630514966051-2c06900a2b9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1170&q=80" alt="Plataformas ERP" class="w-full h-48 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-iteco-blue mb-2">Maximizando <strong class="text-text-dark">ERP Softland y SAP B1</strong> en Cloud ITECO</h3>
-                            <p class="text-sm text-text-light mb-4">El rendimiento de tu ERP depende de una infraestructura administrada y optimizada para ello.</p>
-                            <span class="text-iteco-cyan font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></span>
-                        </div>
-                    </a>
-                    <!-- Artículo 3: Antiransomware -->
-                    <a href="https://www.itecoingenieria.com/blog/antiransomware-con-reversion-automatica-de-ataque/" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden reveal-on-scroll card-feature">
-                        <img src="https://images.unsplash.com/photo-1548092372-6d13b02c3b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1170&q=80" alt="Antiransomware" class="w-full h-48 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-iteco-blue mb-2"><strong class="text-text-dark">Antiransomware con Reversión</strong> Automática</h3>
-                            <p class="text-sm text-text-light mb-4">La única defensa real: cómo recuperar tus sistemas en minutos, no en días, después de un ciberataque.</p>
-                            <span class="text-iteco-cyan font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección "Contacto" (contacto y contactoiteco) - GEO y Formulario -->
-        <section id="contacto" class="py-16 md:py-24 dark-section">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    
-                    <!-- Columna de Información de Contacto (GEO) -->
-                    <div class="reveal-on-scroll">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Contacto y <span class="text-iteco-cyan">Soporte Local</span></h2>
-                        <p class="text-lg text-gray-300 mb-8">
-                            Estamos ubicados en Macul, Santiago. Visítanos o llámanos para una cotización formal de <strong class="text-white">Servicios IaaS PaaS</strong> o <strong class="text-white">Soporte ERP</strong>.
-                        </p>
-                        
-                        <div class="space-y-4 text-lg text-gray-200 mb-8">
-                            <p class="flex items-start"><i class="fas fa-map-marker-alt fa-fw text-iteco-cyan mr-3 mt-1"></i> Av. Vicuña Mackenna 4620, Macul, Santiago.</p>
-                            <p class="flex items-center"><i class="fas fa-phone-alt fa-fw text-iteco-cyan mr-3"></i> +56 2 2506 7200</p>
-                            <p class="flex items-center"><i class="fas fa-clock fa-fw text-iteco-cyan mr-3"></i> Lunes a Viernes, 9:00 - 18:00 hrs.</p>
-                        </div>
-                        
-                        <!-- Mapa (GEO) -->
-                        <div class="rounded-lg overflow-hidden shadow-2xl" style="height: 300px;">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.910086884878!2d-70.59241398479968!3d-33.4735396807662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d001335b671b%3A0xb35787f1766a5e1c!2sAv.%20Vicu%C3%B1a%20Mackenna%204620%2C%20Macul%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1699281783307!5m2!1ses-419!2scl" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+                <!-- Artículo 2: Maximizando ERP -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg" 
+                         onerror="this.onerror=null; this.src='https://source.unsplash.com/random/400x300/?erp,data';" 
+                         alt="Maximización de ERP" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-iteco-cyan">ERP & BI</span>
+                        <h3 class="text-xl font-bold text-iteco-dark mt-2 mb-3">Maximizando tu ERP: Integración y Business Intelligence (BI)</h3>
+                        <p class="text-gray-600 text-sm">Cómo convertir tu ERP (Softland o SAP B1) en una fuente de inteligencia estratégica y no solo contable.</p>
+                        <a href="https://www.itecoingenieria.com/blog/" target="_blank" class="mt-4 inline-block text-iteco-primary hover:text-iteco-cyan font-semibold text-sm">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
+                </div>
 
-                    <!-- Columna de Formulario de Contacto -->
-                    <div class="bg-iteco-light p-6 md:p-8 rounded-lg shadow-2xl reveal-on-scroll">
-                        <h3 class="text-2xl font-bold mb-6 text-text-dark">Formulario de Contacto</h3>
-                        <form id="contact-form" class="space-y-4">
-                            <input type="text" id="contact-name" placeholder="Nombre y Apellido" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-text-dark">
-                            <input type="email" id="contact-email" placeholder="Email Corporativo" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-text-dark">
-                            <input type="text" id="contact-company" placeholder="Empresa (PYME)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-text-dark">
-                            <textarea id="contact-message" rows="4" placeholder="Mensaje o parámetros de tu configuración..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-text-dark"></textarea>
-                            <input type="hidden" id="config-summary" name="config-summary">
-                            <button type="submit" class="w-full btn-primary px-8 py-3 text-lg">
-                                Enviar Consulta y Cotización
-                            </button>
-                            <p id="form-message" class="text-sm text-center text-green-600 hidden"></p>
-                        </form>
+                <!-- Artículo 3: Antiransomware -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/5475752/pexels-photo-5475752.jpeg" 
+                         onerror="this.onerror=null; this.src='https://source.unsplash.com/random/400x300/?ransomware,cybersecurity';" 
+                         alt="Protección Antiransomware" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-iteco-cyan">CONTINUIDAD</span>
+                        <h3 class="text-xl font-bold text-iteco-dark mt-2 mb-3">Antiransomware con Reversión: La Nueva Continuidad Operativa</h3>
+                        <p class="text-gray-600 text-sm">Descubre por qué la protección pasiva ya no es suficiente y cómo la reversión automática salva tu negocio.</p>
+                        <a href="https://www.itecoingenieria.com/blog/" target="_blank" class="mt-4 inline-block text-iteco-primary hover:text-iteco-cyan font-semibold text-sm">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Pie de Página -->
-    <footer class="bg-iteco-dark text-white pt-12 pb-8 border-t border-gray-700">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-sm text-gray-400">© 2025 ITECO Ingeniería LTDA. <strong class="text-white">Servidores en Chile</strong> | <strong class="text-white">Soporte Local</strong> | Todos los derechos reservados.</p>
+            <div class="text-center mt-12">
+                <a href="https://www.itecoingenieria.com/blog/" target="_blank" class="bg-iteco-dark text-white hover:bg-iteco-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Ver Todos los Artículos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO Y GEO -->
+    <section id="contacto" class="py-16 md:py-24 bg-iteco-soft">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-iteco-dark mb-4">
+                Contacto y Ubicación
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Estamos ubicados estratégicamente para ofrecer <strong class="text-iteco-primary">Soporte Local</strong> y personalizado en Chile.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Columna de Formulario de Contacto -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-iteco-primary mb-6">Contáctanos Directamente</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-iteco-cyan focus:border-iteco-cyan">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Corporativo</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-iteco-cyan focus:border-iteco-cyan">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje o Detalle de Requerimiento</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-iteco-cyan focus:border-iteco-cyan"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-iteco-cyan text-iteco-dark hover:bg-iteco-primary hover:text-white font-bold py-3 rounded-full shadow-lg transition duration-300">
+                            Enviar Solicitud <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <p id="form-message" class="mt-4 text-center text-sm font-medium hidden"></p>
+                </div>
+
+                <!-- Columna de Ubicación y Datos -->
+                <div>
+                    <h3 class="text-2xl font-bold text-iteco-dark mb-4">Nuestra Ubicación (Soporte Local)</h3>
+                    <div class="rounded-xl shadow-2xl overflow-hidden mb-6 h-64 lg:h-80 border-4 border-white">
+                        <!-- Google Maps Embed para GEO SEO -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.155776269666!2d-70.589839!3d-33.4735397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf065b7509d3%3A0xf639a061a9f0b2f!2sLas%20Bellotas%20199%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1700688000000!5m2!1sen!2scl" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong class="text-iteco-dark font-semibold"><i class="fas fa-map-marker-alt text-iteco-cyan mr-2"></i> Dirección:</strong> Las Bellotas 199, Oficina 208, Providencia, Santiago.</p>
+                        <p><strong class="text-iteco-dark font-semibold"><i class="fas fa-phone-alt text-iteco-cyan mr-2"></i> Teléfono:</strong> (569) 3452 3370</p>
+                        <p><strong class="text-iteco-dark font-semibold"><i class="fas fa-envelope text-iteco-cyan mr-2"></i> Email:</strong> contacto@iteco.cl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-iteco-dark text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 ITECO INGENIERIA LTDA. Todos los derechos reservados.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-iteco-cyan transition duration-200">Política de Privacidad</a>
+                <a href="#" class="hover:text-iteco-cyan transition duration-200">Términos de Uso</a>
+            </div>
         </div>
     </footer>
 
-    <!-- ------------------ Chatbot Flotante (Gemini Specialist) ------------------ -->
-    <div id="chat-button" class="bg-iteco-cyan p-4 rounded-full shadow-lg">
-        <i class="fas fa-comment-dots fa-2x text-white"></i>
-    </div>
-    <div id="chat-window" class="hidden">
-        <div class="chat-header rounded-t-lg flex justify-between items-center bg-iteco-blue text-white p-4">
-            <h4 class="font-bold text-lg">Especialista ITECO (IA)</h4>
-            <button onclick="toggleChat()" class="text-white hover:text-gray-300"><i class="fas fa-times fa-lg"></i></button>
-        </div>
-        <div id="chat-messages" class="chat-body flex flex-col p-4 space-y-3">
-            <div class="chat-message-ai p-3 rounded-lg bg-gray-200 text-text-dark self-start max-w-xs">
-                ¡Hola! Soy tu Especialista ITECO virtual. ¿En qué puedo ayudarte hoy? Pregúntame sobre <strong>Servidores Administrados</strong>, <strong>Cloud ERP</strong> o <strong>Antiransomware</strong>.
+    <!-- WIDGET DE CHATBOT IA -->
+    <div id="chat-widget">
+        <!-- Ventana de Chat -->
+        <div id="chat-window" class="flex flex-col">
+            <div class="bg-iteco-primary text-white p-4 flex justify-between items-center rounded-t-xl">
+                <div class="font-bold">Especialista ITECO (IA)</div>
+                <button onclick="toggleChat()" class="text-white hover:text-iteco-cyan">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chat-body" class="flex-grow p-4 space-y-4 overflow-y-auto">
+                <div class="message-iteco p-3 max-w-[80%]">
+                    ¡Hola! Soy tu especialista virtual de ITECO. Puedo ayudarte con dudas sobre Servidores Administrados, Cloud ERP, o Continuidad Operativa. ¿En qué puedo asistirte hoy?
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-200">
+                <form id="chat-form" class="flex">
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." class="flex-grow border border-gray-300 rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-iteco-cyan">
+                    <button type="submit" class="bg-iteco-cyan text-iteco-dark px-4 rounded-r-lg hover:bg-iteco-primary hover:text-white transition duration-200">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="chat-input-area p-4 border-t border-gray-200">
-            <form id="chat-form" class="flex">
-                <input type="text" id="chat-input" placeholder="Pregunta sobre Softland, Seguridad..." class="w-full p-2 border border-gray-300 rounded-l-lg focus:ring-iteco-cyan focus:border-iteco-cyan text-text-dark">
-                <button type="submit" id="send-button" class="bg-iteco-cyan px-4 rounded-r-lg text-white hover:bg-iteco-blue transition duration-300">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
-        </div>
+        <!-- Botón de Abrir Chat -->
+        <button id="chat-toggle" class="flex items-center justify-center">
+            <i class="fas fa-comment-dots text-3xl"></i>
+        </button>
     </div>
-    
-    <!-- ------------------ JavaScript (Funcionalidad) ------------------ -->
-    <script type="module">
-        // Importaciones de Firebase (Boilerplate Requerido para el entorno de Gemini)
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        
-        // 1. Inicialización de Firebase (Boilerplate)
-        try {
-            const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-            const app = initializeApp(firebaseConfig);
-            const auth = getAuth(app);
-            await signInAnonymously(auth);
-        } catch (error) {
-            console.warn("Firebase Auth Error (Ignorable en demo):", error.message);
-        }
 
-        // ------------------ 2. Lógica del Chatbot de ITECO (Simulación Funcional) ------------------
-        // No se usa una API key real para que el HTML sea 100% portable y seguro.
-        
-        const chatWindow = document.getElementById('chat-window');
-        const chatButton = document.getElementById('chat-button');
-        const chatForm = document.getElementById('chat-form');
-        const chatInput = document.getElementById('chat-input');
-        const chatMessages = document.getElementById('chat-messages');
-        const sendButton = document.getElementById('send-button');
+    <!-- Referencia al archivo JavaScript -->
+    <script src="script.js"></script>
 
-        window.toggleChat = function() {
-            chatWindow.classList.toggle('is-visible');
-        };
-        chatButton.addEventListener('click', window.toggleChat);
-
-        chatForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const userQuery = chatInput.value.trim().toLowerCase();
-            if (!userQuery) return;
-            renderMessage(userQuery, true);
-            chatInput.value = '';
-            showLoading();
-            
-            // Simulación de respuesta de IA (para que funcione al subirlo)
-            setTimeout(() => {
-                const aiResponse = getSimulatedGeminiResponse(userQuery);
-                hideLoading();
-                renderMessage(aiResponse, false);
-            }, 1200);
-        });
-
-        function getSimulatedGeminiResponse(query) {
-            const systemPrompt = "Actúa como un Especialista en Infraestructura y Cloud de ITECO. Tu objetivo es ser totalmente transparente, claro, informativo y experto. Ofrece siempre soluciones centradas en el cliente, enfocadas en Servidores Administrados Chile, Cloud ERP, Continuidad Operativa, Respaldo de datos, Seguridad (Antiransomware) y Soporte Local para PYMES. Responde solo en español y de forma concisa. Nunca menciones que eres un modelo de lenguaje. Si el usuario pregunta por costos, redirígelo a usar el 'Configurador de Servidores Online' o a contactar formalmente a ITECO.";
-            
-            if (query.includes("erp") || query.includes("softland") || query.includes("sap")) {
-                return "¡Claro! Somos especialistas en <strong>Plataformas ERP Softland y SAP B1</strong>. Ofrecemos <strong>Servidores Administrados</strong> optimizados para el máximo rendimiento de tu ERP, asegurando la <strong>Continuidad Operativa</strong>.";
-            }
-            if (query.includes("precio") || query.includes("costo") || query.includes("cotizar")) {
-                return "Para obtener una estimación precisa de tu proyecto, te recomiendo usar nuestro <strong>Configurador de Servidores Online</strong> en la web. Si deseas una cotización formal, por favor completa el formulario en la sección de <strong>Contacto</strong>.";
-            }
-            if (query.includes("seguridad") || query.includes("ransomware")) {
-                return "Nuestra plataforma de seguridad avanzada incluye <strong>Antiransomware con reversión automática</strong>, Detección y Respuesta (EDR), y auditorías para el <strong>Cumplimiento Normativo ISO 27001</strong>.";
-            }
-            if (query.includes("soporte") || query.includes("local")) {
-                return "Nuestro <strong>Soporte Local</strong> está en Macul, Santiago. Ofrecemos <strong>Servicio de soporte</strong> y <strong>Soporte ERP</strong> con tiempos de respuesta rápidos, lo que nos diferencia de las nubes genéricas.";
-            }
-            if (query.includes("hola") || query.includes("gracias")) {
-                return "¡Hola! Estoy aquí para ayudarte con cualquier duda sobre nuestros servicios de Cloud, ERP y Seguridad. ¿En qué puedo asistirte?";
-            }
-            return "Entendido. Para esa consulta específica sobre " + query + ", te recomiendo contactar a un especialista humano a través de nuestro formulario de contacto. Ellos podrán darte la información detallada que necesitas.";
-        }
-
-        function renderMessage(text, isUser) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = isUser ? 'chat-message-user p-3 rounded-lg bg-iteco-cyan text-white self-end max-w-xs' : 'chat-message-ai p-3 rounded-lg bg-gray-200 text-text-dark self-start max-w-xs';
-            messageDiv.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Doble chequeo de negritas
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function showLoading() {
-            const loading = document.createElement('div');
-            loading.id = 'loading-dots';
-            loading.className = 'chat-message-ai p-3 rounded-lg bg-gray-200 text-text-dark self-start';
-            loading.innerHTML = '<div id="loading-dots"><span></span><span></span><span></span></div>'; // Estilo de carga
-            chatMessages.appendChild(loading);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            sendButton.disabled = true;
-            chatInput.disabled = true;
-        }
-
-        function hideLoading() {
-            document.getElementById('loading-dots')?.remove();
-            sendButton.disabled = false;
-            chatInput.disabled = false;
-            chatInput.focus();
-        }
-
-        // ------------------ 3. Lógica del Configurador (Wizard) ------------------
-        const steps = document.querySelectorAll('.wizard-step');
-        const prevBtn = document.getElementById('wizard-prev');
-        const nextBtn = document.getElementById('wizard-next');
-        const progressBar = document.getElementById('wizard-progress-bar');
-        const calculatorForm = document.getElementById('calculator-form');
-        let currentStep = 1;
-
-        const priceElement = document.getElementById('estimated-price');
-        const recommendationElement = document.getElementById('recommendation-text');
-        
-        function showStep(stepNumber) {
-            steps.forEach(step => step.classList.remove('active'));
-            document.getElementById(`step-${stepNumber}`).classList.add('active');
-            progressBar.style.width = `${(stepNumber / steps.length) * 100}%`;
-            
-            prevBtn.disabled = stepNumber === 1;
-            nextBtn.disabled = (stepNumber === 1 || stepNumber === 2) ? true : false; // Deshabilitar Siguiente en pasos de radio
-            nextBtn.innerHTML = (stepNumber === steps.length - 1) ? 'Calcular <i class="fas fa-magic ml-2"></i>' : 'Siguiente <i class="fas fa-arrow-right ml-2"></i>';
-            
-            if (stepNumber === 5) { // Si es el paso final (resultado)
-                prevBtn.disabled = false;
-                nextBtn.style.display = 'none';
-                calculatePrice(); // Calcular al llegar al final
+    <!-- Script de Fallback de Imagen (Si falla Pexels, usa Unsplash) -->
+    <script>
+        function onImageError(image) {
+            console.error('La imagen de Pexels falló al cargar:', image.src);
+            // Reemplazar con una URL de fallback más robusta (Unsplash)
+            // Esto asegura que la imagen se vea si Pexels está bloqueado.
+            if (image.alt.includes('Cloud ERP')) {
+                image.src = 'https://source.unsplash.com/random/800x600/?cloud,erp';
+            } else if (image.alt.includes('Auditoría')) {
+                image.src = 'https://source.unsplash.com/random/400x300/?auditing,security';
+            } else if (image.alt.includes('Maximización')) {
+                image.src = 'https://source.unsplash.com/random/400x300/?erp,data';
+            } else if (image.alt.includes('Antiransomware')) {
+                image.src = 'https://source.unsplash.com/random/400x300/?ransomware,cybersecurity';
             } else {
-                nextBtn.style.display = 'inline-block';
+                 // Si falla el fallback, mostrar un placeholder simple
+                image.outerHTML = `<div class="image-error h-48 w-full">Error de Carga. Placeholder activo.</div>`;
             }
+            image.onerror = null; // Prevenir bucle infinito de errores
         }
-        
-        prevBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                showStep(currentStep);
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentStep < steps.length) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-
-        // Event listeners para los radios (selección y avance)
-        document.querySelectorAll('.wizard-radio-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                // Marcar selección visual
-                const radioName = card.querySelector('input[type="radio"]').name;
-                document.querySelectorAll(`input[name="${radioName}"]`).forEach(radio => {
-                    radio.closest('.wizard-radio-card').classList.remove('selected');
-                });
-                card.classList.add('selected');
-                card.querySelector('input[type="radio"]').checked = true;
-                
-                // Habilitar y avanzar
-                nextBtn.disabled = false;
-                setTimeout(() => {
-                    if (currentStep < steps.length - 1) { // No avanzar en el último paso
-                         currentStep++;
-                         showStep(currentStep);
-                    }
-                }, 300); // Pequeño delay para UX
-            });
-        });
-
-        // Actualizar valores de sliders (UX)
-        document.getElementById('prop-users').addEventListener('input', (e) => {
-            document.getElementById('users-value').innerText = e.target.value;
-        });
-
-        // Calcular precio (la misma lógica de antes)
-        function calculatePrice() {
-            let basePrice = 5.0; 
-            let users = parseInt(document.getElementById('prop-users').value) || 10;
-            const purpose = document.querySelector('input[name="purpose"]:checked')?.value || 'otros';
-            const availability = document.querySelector('input[name="availability"]:checked')?.value || 'jornada';
-            const management = document.getElementById('prop-management').value;
-            const backup = document.getElementById('prop-backup').value;
-            const storage = document.getElementById('prop-storage').value;
-            
-            let purposeText = "Básico";
-            if(purpose === 'web'){ basePrice += 3; purposeText = "Web/Interfaces"; }
-            else if(purpose === 'produccion'){ basePrice += 10; purposeText = "Producción/Logística"; }
-            else if(purpose === 'erp'){ basePrice += 25; purposeText = "Misión Crítica ERP"; }
-
-            let availText = "Jornada 8x5";
-            if(availability === 'nocturno'){ basePrice += 0; availText = "Uso Nocturno"; }
-            else if(availability === 'continuo'){ basePrice += 12; availText = "Procesamiento 7x24"; }
-            else if(availability === 'critico'){ basePrice += 20; availText = "Misión Crítica (HA)"; }
-
-            basePrice += (users * 0.35); 
-
-            let mgmtText = "Autogestionado (IaaS)";
-            if (management === 'admin') {
-                basePrice += 18; 
-                mgmtText = "Administrado (PaaS + Soporte)";
-            }
-
-            let backupText = "Sin Respaldo";
-            if(backup === 'semanal'){ basePrice += 6; backupText = "Respaldo Semanal"; }
-            else if(backup === 'diario'){ basePrice += 12; backupText = "Diario + Antiransomware"; }
-            else if(backup === 'replicacion'){ basePrice += 35; backupText = "Replicación Continua"; }
-
-            let storageText = `200GB (Base)`;
-            if (storage === '500') { basePrice += 6; storageText = "500GB"; }
-            else if (storage === '1000') { basePrice += 15; storageText = "1TB"; }
-            else if (storage === '2000') { basePrice += 28; storageText = "2TB"; }
-            else if (storage === '4000') { basePrice += 50; storageText = ">2TB"; }
-            
-            priceElement.innerText = 'UF ' + basePrice.toFixed(1) + ' / mes';
-            recommendationElement.innerText = `${purposeText} | ${availText} | ${mgmtText} | ${backupText}`;
-            
-            // Llenar el campo oculto para el formulario de contacto
-            document.getElementById('config-summary').value = `CONFIGURACIÓN: ${purposeText}, ${availText}, ${users} usuarios, ${mgmtText}, ${backupText}, ${storageText}. PRECIO ESTIMADO: UF ${basePrice.toFixed(1)} / mes.`;
-        }
-
-        // Event listeners para recalcular en los pasos 3 y 4
-        calculatorForm.addEventListener('change', () => {
-            if (currentStep >= 3) { // Recalcular si se cambian los pasos 3 o 4
-                calculatePrice();
-            }
-        });
-        
-        // Inicializar el Wizard
-        showStep(currentStep);
-
-        // ------------------ 4. Lógica de Contacto (Formulario y Pre-llenado) ------------------
-        const contactForm = document.getElementById('contact-form');
-        const contactMessage = document.getElementById('contact-message');
-        const formMessage = document.getElementById('form-message');
-
-        // Pre-llenar formulario desde la calculadora (UX/CX)
-        document.getElementById('btn-cotizar-final').addEventListener('click', function() {
-            const summary = document.getElementById('config-summary').value;
-            contactMessage.value = `¡Hola! Me gustaría una cotización formal basada en esta estimación:\n\n${summary}\n\nPor favor, contáctenme.`;
-            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-            contactMessage.focus();
-        });
-
-        // Simulación de envío de formulario (CX)
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            formMessage.innerText = "¡Mensaje Enviado! Un especialista de ITECO se pondrá en contacto pronto.";
-            formMessage.classList.remove('hidden');
-            formMessage.classList.add('text-green-600');
-            setTimeout(() => {
-                contactForm.reset();
-                formMessage.classList.add('hidden');
-                contactMessage.value = ''; 
-                // Resetear wizard
-                currentStep = 1;
-                showStep(currentStep);
-                document.querySelectorAll('.wizard-radio-card').forEach(c => c.classList.remove('selected'));
-                calculatorForm.reset();
-            }, 4000);
-        });
-
-        // ------------------ 5. Lógica de Menú Móvil ------------------
-        document.getElementById('menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        // Cerrar menú al hacer clic en un enlace (UX)
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-            });
-        });
-        
-        // ------------------ 6. Lógica de Animaciones de Scroll (UX) ------------------
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Añadir delay si está definido en data-delay
-                    const delay = entry.target.getAttribute('data-delay') || 0;
-                    setTimeout(() => {
-                        entry.target.classList.add('is-visible');
-                    }, delay);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 }); // Activar al 10% de visibilidad
-
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
     </script>
 </body>
 </html>
