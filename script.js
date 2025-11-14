@@ -151,7 +151,7 @@ Por favor, contáctenme.`;
     // =========================================================================
     // 3. Chatbot IA (Conectado a Apps Script)
     // =========================================================================
-    const YOUR_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwguteU6czzhSoSIgus14ygBtjj1EPZPJyeHQkXR3_0vvkQgJ3aRx7nIBG2uBkPDoS1/exec';
+    const YOUR_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwHtgfGMV4FHY1JTQjXEcexLb5162QtFbZt1yYa1sLUKAUIEvSZOx_GpM-HL1nX0gSy/exec';
 
     const chatToggle = document.getElementById('chat-toggle');
     const chatWindow = document.getElementById('chat-window');
